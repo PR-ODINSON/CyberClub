@@ -6,14 +6,17 @@
   publish = "dist"
   
   # Default build command
-  command = "npm run build"
+  command = "npm install && npm run build"
 
 [build.environment]
   # Node.js version for build
   NODE_VERSION = "18"
   
   # NPM version
-  NPM_VERSION = "9"
+  NPM_VERSION = "10"
+  
+  # Ensure all dependencies are installed
+  NPM_FLAGS = "--include=dev"
 
 # Redirect rules for SPA (Single Page Application)
 [[redirects]]
