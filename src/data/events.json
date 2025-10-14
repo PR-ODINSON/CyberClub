@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "CYBERWISE – 2-Day Workshop on Cybersecurity for Information Security Expertise",
+    "description": "The CYBERWISE Workshop aims to create awareness and provide hands-on exposure to students, faculty, and staff on various aspects of cybersecurity, cybercrimes, and preventive measures. The two-day event will feature expert talks, interactive discussions, and practical sessions, offering participants the opportunity to experience real-world cybersecurity practices and defense mechanisms.",
+    "date": "2025-11-14",
+    "endDate": "2025-11-15",
+    "time": "09:00",
+    "endTime": "17:00",
+    "location": "IITRAM Campus, Ahmedabad",
+    "type": "Workshop",
+    "category": "Cybersecurity",
+    "organizer": "Cyber Club, IITRAM, Ahmedabad",
+    "sponsor": "CAWACH Kendra, Government of Gujarat",
+    "maxAttendees": 100,
+    "currentAttendees": 0,
+    "difficulty": "All Levels",
+    "prerequisites": ["Basic computer knowledge", "Interest in cybersecurity"],
+    "materials": ["Laptop", "Notebook", "Writing materials"],
+    "image": "/events/cyberwise-workshop.jpg",
+    "featured": true,
+    "agenda": [
+      "Expert Talks",
+      "Hands-on Labs", 
+      "Cybercrime Awareness",
+      "Preventive Techniques"
+    ],
+    "tags": ["Cybersecurity", "Workshop", "Information Security", "CAWACH", "IITRAM"]
+  }
+]
