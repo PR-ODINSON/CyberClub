@@ -19,6 +19,7 @@
     "materials": ["Laptop", "Notebook", "Writing materials"],
     "image": "/events/cyberwise-workshop.jpg",
     "featured": true,
+    "registrationOpen": true,
     "agenda": [
       "Expert Talks",
       "Hands-on Labs", 
@@ -26,5 +27,34 @@
       "Preventive Techniques"
     ],
     "tags": ["Cybersecurity", "Workshop", "Information Security", "CAWACH", "IITRAM"]
+  },
+  {
+    "id": 2,
+    "title": "NETWISE - Smart & Safe Internet Practices",
+    "description": "A program designed to promote responsible and safe internet usage, particularly among students and young professionals, with emphasis on smart internet habits, online fraud prevention, digital ethics, digital footprints management etc.",
+    "date": "2026-01-16",
+    "endDate": "2026-01-17",
+    "time": "09:00",
+    "endTime": "17:00",
+    "location": "IITRAM Campus, Ahmedabad",
+    "type": "Seminar",
+    "category": "Digital Safety",
+    "organizer": "Cyber Club, IITRAM, Ahmedabad",
+    "sponsor": "TBD",
+    "maxAttendees": 150,
+    "currentAttendees": 0,
+    "difficulty": "All Levels",
+    "prerequisites": ["Basic internet knowledge", "Interest in digital safety"],
+    "materials": ["Notebook", "Writing materials"],
+    "image": "/events/netwise-seminar.jpg",
+    "featured": false,
+    "registrationOpen": false,
+    "agenda": [
+      "Smart Internet Habits",
+      "Online Fraud Prevention", 
+      "Digital Ethics",
+      "Digital Footprint Management"
+    ],
+    "tags": ["Digital Safety", "Internet Security", "Online Ethics", "Fraud Prevention", "IITRAM"]
   }
 ]

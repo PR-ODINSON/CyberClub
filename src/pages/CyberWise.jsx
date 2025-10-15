@@ -288,6 +288,253 @@ const CyberWise = () => {
           </div>
         </motion.section>
 
+        {/* Invited Speakers Section */}
+        <motion.section 
+          className="py-20 bg-gradient-to-b from-accent/5 to-transparent"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <div className="container-width">
+            <motion.div variants={itemVariants} className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6">
+                <span className="gradient-text">Invited Speakers</span>
+              </h2>
+              <p className="text-xl text-muted-light dark:text-muted-dark max-w-3xl mx-auto">
+                Learn from distinguished experts and industry leaders in cybersecurity
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+              {/* Speaker 1: Shahnawaaz Abdullah */}
+              <motion.div
+                variants={itemVariants}
+                className="group perspective-1000"
+              >
+                <div className="relative w-full h-80 transform-style-preserve-3d transition-transform duration-700 group-hover:rotate-y-180">
+                  {/* Front of card */}
+                  <div className="absolute inset-0 backface-hidden rounded-2xl overflow-hidden border border-primary/20">
+                    <div className="relative h-full">
+                      <img 
+                        src="/Shahnawaaz Abdullah.jpg" 
+                        alt="Mr. Shahnawaaz Abdullah"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 className="text-xl font-heading font-bold text-white mb-1">
+                          Mr. Shahnawaaz Abdullah
+                        </h3>
+                        <p className="text-primary text-sm font-semibold">
+                          Central Bureau of Investigation, Delhi
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Back of card */}
+                  <div className="absolute inset-0 backface-hidden rotate-y-180 bg-dark/95 backdrop-blur-sm rounded-2xl border border-primary/20 p-6 flex flex-col justify-center">
+                    <div className="text-center">
+                      <h3 className="text-lg font-heading font-bold text-white mb-4">
+                        Mr. Shahnawaaz Abdullah
+                      </h3>
+                      <div className="space-y-3 text-sm text-muted-light">
+                        <p><strong className="text-primary">Position:</strong> Officer, CBI Delhi</p>
+                        <p><strong className="text-primary">Expertise:</strong> Cybercrime Investigation, Digital Forensics</p>
+                        <p><strong className="text-primary">Focus:</strong> Complex cybercrime cases, financial fraud investigation</p>
+                        <p className="text-xs leading-relaxed">
+                          Seasoned investigator with extensive experience in handling high-profile cybercrime cases and digital forensics.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Speaker 2: Dr. Nitin Awathare */}
+              <motion.div
+                variants={itemVariants}
+                className="group perspective-1000"
+              >
+                <div className="relative w-full h-80 transform-style-preserve-3d transition-transform duration-700 group-hover:rotate-y-180">
+                  {/* Front of card */}
+                  <div className="absolute inset-0 backface-hidden rounded-2xl overflow-hidden border border-primary/20">
+                    <div className="relative h-full">
+                      <img 
+                        src="/Nitin Awathare.png" 
+                        alt="Dr. Nitin Awathare"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 className="text-xl font-heading font-bold text-white mb-1">
+                          Dr. Nitin Awathare
+                        </h3>
+                        <p className="text-primary text-sm font-semibold">
+                          IIT Jodhpur
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Back of card */}
+                  <div className="absolute inset-0 backface-hidden rotate-y-180 bg-dark/95 backdrop-blur-sm rounded-2xl border border-primary/20 p-6 flex flex-col justify-center">
+                    <div className="text-center">
+                      <h3 className="text-lg font-heading font-bold text-white mb-4">
+                        Dr. Nitin Awathare
+                      </h3>
+                      <div className="space-y-3 text-sm text-muted-light">
+                        <p><strong className="text-primary">Position:</strong> Assistant Professor, CSE</p>
+                        <p><strong className="text-primary">Expertise:</strong> Distributed Systems, Blockchain</p>
+                        <p><strong className="text-primary">Focus:</strong> Payment Channel Networks, System Architecture</p>
+                        <p className="text-xs leading-relaxed">
+                          Ph.D. from IIT Bombay (2022), specializes in blockchain technology and distributed systems security.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Speaker 3: Dr. Sameer Kulkarni */}
+              <motion.div
+                variants={itemVariants}
+                className="group perspective-1000"
+              >
+                <div className="relative w-full h-80 transform-style-preserve-3d transition-transform duration-700 group-hover:rotate-y-180">
+                  {/* Front of card */}
+                  <div className="absolute inset-0 backface-hidden rounded-2xl overflow-hidden border border-primary/20">
+                    <div className="relative h-full">
+                      <img 
+                        src="/Sameer Kulkarni.jpg" 
+                        alt="Dr. Sameer Kulkarni"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 className="text-xl font-heading font-bold text-white mb-1">
+                          Dr. Sameer Kulkarni
+                        </h3>
+                        <p className="text-primary text-sm font-semibold">
+                          IIT Gandhinagar
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Back of card */}
+                  <div className="absolute inset-0 backface-hidden rotate-y-180 bg-dark/95 backdrop-blur-sm rounded-2xl border border-primary/20 p-6 flex flex-col justify-center">
+                    <div className="text-center">
+                      <h3 className="text-lg font-heading font-bold text-white mb-4">
+                        Dr. Sameer Kulkarni
+                      </h3>
+                      <div className="space-y-3 text-sm text-muted-light">
+                        <p><strong className="text-primary">Position:</strong> Faculty, Computer Science</p>
+                        <p><strong className="text-primary">Expertise:</strong> Cybersecurity, Network Security</p>
+                        <p><strong className="text-primary">Focus:</strong> Information Security, Cryptography</p>
+                        <p className="text-xs leading-relaxed">
+                          Renowned researcher in cybersecurity with extensive work in network security and cryptographic protocols.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Speaker 4: Dr. Nilay Mistry */}
+              <motion.div
+                variants={itemVariants}
+                className="group perspective-1000"
+              >
+                <div className="relative w-full h-80 transform-style-preserve-3d transition-transform duration-700 group-hover:rotate-y-180">
+                  {/* Front of card */}
+                  <div className="absolute inset-0 backface-hidden rounded-2xl overflow-hidden border border-primary/20">
+                    <div className="relative h-full">
+                      <img 
+                        src="/Nilay Mistry.jpg" 
+                        alt="Dr. Nilay Mistry"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 className="text-xl font-heading font-bold text-white mb-1">
+                          Dr. Nilay Mistry
+                        </h3>
+                        <p className="text-primary text-sm font-semibold">
+                          National Forensic Sciences University
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Back of card */}
+                  <div className="absolute inset-0 backface-hidden rotate-y-180 bg-dark/95 backdrop-blur-sm rounded-2xl border border-primary/20 p-6 flex flex-col justify-center">
+                    <div className="text-center">
+                      <h3 className="text-lg font-heading font-bold text-white mb-4">
+                        Dr. Nilay Mistry
+                      </h3>
+                      <div className="space-y-3 text-sm text-muted-light">
+                        <p><strong className="text-primary">Position:</strong> Faculty, NFSU</p>
+                        <p><strong className="text-primary">Expertise:</strong> Digital Forensics, Cyber Law</p>
+                        <p><strong className="text-primary">Focus:</strong> Forensic Analysis, Evidence Recovery</p>
+                        <p className="text-xs leading-relaxed">
+                          Expert in digital forensics and cyber law with extensive experience in forensic investigations and evidence analysis.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Speaker 5: Dr. Manoj Choudhuri */}
+              <motion.div
+                variants={itemVariants}
+                className="group perspective-1000"
+              >
+                <div className="relative w-full h-80 transform-style-preserve-3d transition-transform duration-700 group-hover:rotate-y-180">
+                  {/* Front of card */}
+                  <div className="absolute inset-0 backface-hidden rounded-2xl overflow-hidden border border-primary/20">
+                    <div className="relative h-full">
+                      <img 
+                        src="/Manoj Choudhuri.jpg" 
+                        alt="Dr. Manoj Choudhuri"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 className="text-xl font-heading font-bold text-white mb-1">
+                          Dr. Manoj Choudhuri
+                        </h3>
+                        <p className="text-primary text-sm font-semibold">
+                          IITRAM
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Back of card */}
+                  <div className="absolute inset-0 backface-hidden rotate-y-180 bg-dark/95 backdrop-blur-sm rounded-2xl border border-primary/20 p-6 flex flex-col justify-center">
+                    <div className="text-center">
+                      <h3 className="text-lg font-heading font-bold text-white mb-4">
+                        Dr. Manoj Choudhuri
+                      </h3>
+                      <div className="space-y-3 text-sm text-muted-light">
+                        <p><strong className="text-primary">Position:</strong> Faculty, IITRAM</p>
+                        <p><strong className="text-primary">Expertise:</strong> Computer Science, Cybersecurity</p>
+                        <p><strong className="text-primary">Focus:</strong> Information Security, Research</p>
+                        <p className="text-xs leading-relaxed">
+                          Distinguished faculty member at IITRAM with expertise in computer science and cybersecurity research.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </motion.section>
+
         {/* Registration Section */}
         <motion.section 
           className="py-20 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10"

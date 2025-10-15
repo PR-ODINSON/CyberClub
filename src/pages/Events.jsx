@@ -11,10 +11,8 @@ const Events = () => {
   const { setHover, removeHover } = useCursor()
   const prefersReducedMotion = usePrefersReducedMotion()
   
-  // Events data - only CYBERWISE for now
-  const allEvents = [
-    eventsData[0] // CYBERWISE
-  ]
+  // Events data - all events
+  const allEvents = eventsData
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -187,8 +185,10 @@ const Events = () => {
                                     </span>
                                   )}
                                   <div className="flex items-center space-x-1">
-                                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                                    <span className="text-xs text-gray-600 dark:text-muted-dark">Registration Open</span>
+                                    <div className={`w-2 h-2 rounded-full ${event.registrationOpen ? 'bg-green-400 animate-pulse' : 'bg-yellow-400 animate-pulse'}`} />
+                                    <span className="text-xs text-gray-600 dark:text-muted-dark">
+                                      {event.registrationOpen ? 'Registration Open' : 'Registration Opening Soon'}
+                                    </span>
                                   </div>
                                 </div>
 
