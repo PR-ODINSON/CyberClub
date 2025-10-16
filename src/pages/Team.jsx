@@ -28,39 +28,45 @@ const Team = () => {
   const mentors = [
     {
       name: "Dr. Prasun Chandra Tripathi",
-      email: "prasun.tripathi@iitram.ac.in",
+      email: "prasunchandratripathi@iitram.ac.in",
       specialization: "Cybersecurity & Network Security",
-      department: "Electrical and Computer Engineering"
+      department: "Electrical and Computer Engineering",
+      image: "/team/Prasun Chandra Tripathi.webp"
     },
     {
       name: "Dr. Ramnarayan Yadav",
-      email: "ramnarayan.yadav@iitram.ac.in",
+      email: "ramnarayan@iitram.ac.in",
       specialization: "Information Security & Cryptography",
-      department: "Electrical and Computer Engineering"
+      department: "Electrical and Computer Engineering",
+      image: "/team/Ramnarayan Yadav.webp"
     },
     {
       name: "Dr. Ravi Bhandari",
-      email: "ravi.bhandari@iitram.ac.in",
+      email: "ravibhandari@iitram.ac.in",
       specialization: "Digital Forensics & Ethical Hacking",
-      department: "Electrical and Computer Engineering"
+      department: "Electrical and Computer Engineering",
+      image: "/team/Ravi Bhandari.webp"
     },
     {
       name: "Dr. Manoj Choudhuri",
-      email: "manoj.choudhuri@iitram.ac.in",
+      email: "manojchoudhuri@iitram.ac.in",
       specialization: "Machine Learning Security",
-      department: "Basic Sciences"
+      department: "Basic Sciences",
+      image: "/team/Manoj Choudhuri.jpg"
     },
     {
       name: "Dr. Sumit Tripathi",
-      email: "sumit.tripathi@iitram.ac.in",
+      email: "sumittripathi@iitram.ac.in",
       specialization: "Blockchain & Distributed Systems",
-      department: "Mechanical and Aerospace Engineering"
+      department: "Mechanical and Aerospace Engineering",
+      image: "/team/Sumit Tripathi.webp"
     },
     {
       name: "Dr. Naveet Khanna",
-      email: "naveet.khanna@iitram.ac.in",
+      email: "naveetkhanna@iitram.ac.in",
       specialization: "IoT Security & Privacy",
-      department: "Mechanical and Aerospace Engineering"
+      department: "Mechanical and Aerospace Engineering",
+      image: "/team/Navneet Khanna.webp"
     }
   ]
 
@@ -68,9 +74,57 @@ const Team = () => {
     {
       name: "Prithviraj Verma",
       oneLiner: "B.Tech Undergrad working in AI/ML and Backend Development",
-      github: "https://github.com/PR-ODINSON",
-      linkedin: "https://www.linkedin.com/in/prithviraj-verma-b58707289/",
-      role: "Lead Developer & AI Researcher"
+      role: "Lead Developer & AI Researcher",
+      image: "/team/Prithviraj Verma.JPG"
+    },
+    {
+      name: "Rudra Trangadia",
+      oneLiner: "Passionate cybersecurity enthusiast and developer",
+      role: "Student Member",
+      image: "/team/Rudra Trangadia.jpg"
+    },
+    {
+      name: "Lakavath Sandeep",
+      oneLiner: "Dedicated to advancing cybersecurity research and development",
+      role: "Student Member",
+      image: "/team/Lakavath Sandeep.jpg"
+    },
+    {
+      name: "Tholiya Bhagy Ketanbhai",
+      oneLiner: "Innovative thinker in cybersecurity and technology",
+      role: "Student Member",
+      image: "/team/Bhagy Tholiya.webp"
+    },
+    {
+      name: "Devkrishna Rajkotiya",
+      oneLiner: "Exploring the frontiers of digital security and privacy",
+      role: "Student Member",
+      image: "/team/Devkrishna.jpg",
+      imagePosition: "object-[center_20%]" // Adjust positioning to show face better
+    },
+    {
+      name: "Khushan Borse",
+      oneLiner: "Committed to building secure digital solutions",
+      role: "Student Member",
+      image: "/team/Khushan Borse.JPG"
+    },
+    {
+      name: "Anshul Singhal",
+      oneLiner: "Cybersecurity researcher with focus on emerging threats",
+      role: "Student Member",
+      image: "/team/Anshul Singhal.jpg"
+    },
+    {
+      name: "Chintan Boghani",
+      oneLiner: "Passionate about ethical hacking and security analysis",
+      role: "Student Member",
+      image: "/team/Chintan Boghani.jpg"
+    },
+    {
+      name: "Lucky Prasad",
+      oneLiner: "Dedicated to cybersecurity education and awareness",
+      role: "Student Member",
+      image: "/team/Lucky Prasad.jpg"
     }
   ]
 
@@ -83,8 +137,18 @@ const Team = () => {
     >
       {/* Avatar */}
       <div className="flex items-center justify-center mb-6">
-        <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center border-2 border-primary/30 group-hover:border-primary/60 transition-all duration-300">
-          <FiUser className="w-12 h-12 text-primary" />
+        <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/60 transition-all duration-300">
+          {mentor.image ? (
+            <img 
+              src={mentor.image} 
+              alt={mentor.name}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+              <FiUser className="w-12 h-12 text-primary" />
+            </div>
+          )}
         </div>
       </div>
 
@@ -92,11 +156,6 @@ const Team = () => {
       <h3 className="text-xl font-heading font-bold text-dark dark:text-light mb-2 text-center">
         {mentor.name}
       </h3>
-
-      {/* Specialization */}
-      <p className="text-primary font-medium text-center mb-2">
-        {mentor.specialization}
-      </p>
 
       {/* Department */}
       <p className="text-muted-light dark:text-muted-dark text-sm text-center mb-4">
@@ -133,8 +192,18 @@ const Team = () => {
     >
       {/* Avatar */}
       <div className="flex items-center justify-center mb-6">
-        <div className="w-24 h-24 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full flex items-center justify-center border-2 border-accent/30 group-hover:border-accent/60 transition-all duration-300">
-          <FiUser className="w-12 h-12 text-accent" />
+        <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-accent/30 group-hover:border-accent/60 transition-all duration-300">
+          {student.image ? (
+            <img 
+              src={student.image} 
+              alt={student.name}
+              className={`w-full h-full object-cover ${student.imagePosition || ''}`}
+            />
+          ) : (
+            <div className="w-full h-full bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
+              <FiUser className="w-12 h-12 text-accent" />
+            </div>
+          )}
         </div>
       </div>
 
@@ -153,25 +222,6 @@ const Team = () => {
         {student.oneLiner}
       </p>
 
-      {/* Social Links */}
-      <div className="flex items-center justify-center space-x-4">
-        <a
-          href={student.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center w-10 h-10 bg-dark/30 dark:bg-light/10 rounded-full hover:bg-primary/20 hover:text-primary transition-all duration-300 group/link"
-        >
-          <FiGithub className="w-5 h-5 group-hover/link:scale-110 transition-transform duration-300" />
-        </a>
-        <a
-          href={student.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center w-10 h-10 bg-dark/30 dark:bg-light/10 rounded-full hover:bg-accent/20 hover:text-accent transition-all duration-300 group/link"
-        >
-          <FiLinkedin className="w-5 h-5 group-hover/link:scale-110 transition-transform duration-300" />
-        </a>
-      </div>
 
       {/* Student Badge */}
       <div className="flex items-center justify-center mt-4">
