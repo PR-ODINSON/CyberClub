@@ -75,19 +75,25 @@ const Team = () => {
       name: "Prithviraj Verma",
       oneLiner: "B.Tech Undergrad working in AI/ML and Backend Development",
       role: "Lead Developer & AI Researcher",
-      image: "/team/Prithviraj Verma.JPG"
+      image: "/team/Prithviraj Verma.JPG",
+      github: "https://github.com/PR-ODINSON",
+      linkedin: "https://www.linkedin.com/in/prithviraj-verma-b58707289/"
     },
     {
       name: "Rudra Trangadia",
       oneLiner: "Passionate cybersecurity enthusiast and developer",
       role: "Student Member",
-      image: "/team/Rudra Trangadia.jpg"
+      image: "/team/Rudra Trangadia.jpg",
+      github: "https://github.com/dev-tr26",
+      linkedin: "https://www.linkedin.com/in/rudra-trangadia-08b679241"
     },
     {
       name: "Lakavath Sandeep",
       oneLiner: "Dedicated to advancing cybersecurity research and development",
       role: "Student Member",
-      image: "/team/Lakavath Sandeep.jpg"
+      image: "/team/Lakavath Sandeep.jpg",
+      github: "https://github.com/LakavathSandeep99",
+      linkedin: "https://www.linkedin.com/in/lakavath-sandeep-a26451320"
     },
     {
       name: "Tholiya Bhagy Ketanbhai",
@@ -100,31 +106,49 @@ const Team = () => {
       oneLiner: "Exploring the frontiers of digital security and privacy",
       role: "Student Member",
       image: "/team/Devkrishna.jpg",
-      imagePosition: "object-[center_20%]" // Adjust positioning to show face better
+      imagePosition: "object-[center_20%]", // Adjust positioning to show face better
+      github: "https://github.com/Devkrishna-11",
+      linkedin: "https://www.linkedin.com/in/dev-krishna-rajkotiya"
     },
     {
       name: "Khushan Borse",
       oneLiner: "Committed to building secure digital solutions",
       role: "Student Member",
-      image: "/team/Khushan Borse.JPG"
+      image: "/team/Khushan Borse.JPG",
+      github: "https://github.com/thekhushan",
+      linkedin: "https://www.linkedin.com/in/khushan-borse-005a32299/"
     },
     {
       name: "Anshul Singhal",
       oneLiner: "Cybersecurity researcher with focus on emerging threats",
       role: "Student Member",
-      image: "/team/Anshul Singhal.jpg"
+      image: "/team/Anshul Singhal.jpg",
+      github: "https://github.com/anshulsinghal974",
+      linkedin: "https://www.linkedin.com/in/anshul-singhal-114908321"
     },
     {
       name: "Chintan Boghani",
       oneLiner: "Passionate about ethical hacking and security analysis",
       role: "Student Member",
-      image: "/team/Chintan Boghani.jpg"
+      image: "/team/Chintan Boghani.jpg",
+      github: "https://github.com/thechintan",
+      linkedin: "https://www.linkedin.com/in/chintanboghani"
     },
     {
       name: "Lucky Prasad",
       oneLiner: "Dedicated to cybersecurity education and awareness",
       role: "Student Member",
-      image: "/team/Lucky Prasad.jpg"
+      image: "/team/Lucky Prasad.jpg",
+      github: "https://github.com/Lucky0903",
+      linkedin: "https://www.linkedin.com/in/lucky-prasad-47256838b"
+    },
+    {
+      name: "Prajapati Dev Nareshkumar",
+      oneLiner: "Passionate developer focused on innovative solutions",
+      role: "Student Member",
+      image: "/team/default-avatar.jpg", // You may need to add an actual image
+      github: "https://github.com/Devprajapati09",
+      linkedin: "https://www.linkedin.com/in/dev-prajapati-ab746633a"
     }
   ]
 
@@ -222,6 +246,31 @@ const Team = () => {
         {student.oneLiner}
       </p>
 
+      {/* Social Links */}
+      {(student.github || student.linkedin) && (
+        <div className="flex items-center justify-center space-x-4 mb-6">
+          {student.github && (
+            <a
+              href={student.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 bg-accent/10 hover:bg-accent/20 rounded-full flex items-center justify-center transition-all duration-300 group/social"
+            >
+              <FiGithub className="w-5 h-5 text-accent group-hover/social:scale-110 transition-transform duration-300" />
+            </a>
+          )}
+          {student.linkedin && (
+            <a
+              href={student.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 bg-accent/10 hover:bg-accent/20 rounded-full flex items-center justify-center transition-all duration-300 group/social"
+            >
+              <FiLinkedin className="w-5 h-5 text-accent group-hover/social:scale-110 transition-transform duration-300" />
+            </a>
+          )}
+        </div>
+      )}
 
       {/* Student Badge */}
       <div className="flex items-center justify-center mt-4">
