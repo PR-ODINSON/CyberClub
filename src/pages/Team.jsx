@@ -146,7 +146,7 @@ const Team = () => {
       name: "Prajapati Dev Nareshkumar",
       oneLiner: "Passionate developer focused on innovative solutions",
       role: "Student Member",
-      image: "/team/default-avatar.jpg", // You may need to add an actual image
+      image: "/team/DEV PRAJAPATI.jpg", // You may need to add an actual image
       github: "https://github.com/Devprajapati09",
       linkedin: "https://www.linkedin.com/in/dev-prajapati-ab746633a"
     }
