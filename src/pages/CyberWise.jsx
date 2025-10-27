@@ -306,7 +306,7 @@ const CyberWise = () => {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8">
               {/* Speaker 1: Shahnawaaz Abdullah */}
               <motion.div
                 variants={itemVariants}
@@ -531,6 +531,51 @@ const CyberWise = () => {
                   </div>
                 </div>
               </motion.div>
+
+              {/* Speaker 6: Dr. Parag C. Shukla */}
+              <motion.div
+                variants={itemVariants}
+                className="group perspective-1000"
+              >
+                <div className="relative w-full h-80 transform-style-preserve-3d transition-transform duration-700 group-hover:rotate-y-180">
+                  {/* Front of card */}
+                  <div className="absolute inset-0 backface-hidden rounded-2xl overflow-hidden border border-primary/20">
+                    <div className="relative h-full">
+                      <img 
+                        src="/Parag-Shukal.png" 
+                        alt="Dr. Parag C. Shukla"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 className="text-xl font-heading font-bold text-white mb-1">
+                          Dr. Parag C. Shukla
+                        </h3>
+                        <p className="text-primary text-sm font-semibold">
+                          Kaushalya - The Skill University
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Back of card */}
+                  <div className="absolute inset-0 backface-hidden rotate-y-180 bg-dark/95 backdrop-blur-sm rounded-2xl border border-primary/20 p-6 flex flex-col justify-center">
+                    <div className="text-center">
+                      <h3 className="text-lg font-heading font-bold text-white mb-4">
+                        Dr. Parag C. Shukla
+                      </h3>
+                      <div className="space-y-3 text-sm text-muted-light">
+                        <p><strong className="text-primary">Position:</strong> Associate Professor & Head of Department</p>
+                        <p><strong className="text-primary">Department:</strong> School of Computing</p>
+                        <p><strong className="text-primary">Institution:</strong> Kaushalya - The Skill University</p>
+                        <p className="text-xs leading-relaxed">
+                          Distinguished academic leader with expertise in computing and technology education, driving innovation in skill development.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </motion.section>
@@ -564,7 +609,7 @@ const CyberWise = () => {
               </motion.a>
               
               <p className="text-sm text-muted-light dark:text-muted-dark">
-                Limited seats available • Free registration
+                Limited seats available • Free registration • Registration Deadline: November 8, 2025
               </p>
             </motion.div>
           </div>

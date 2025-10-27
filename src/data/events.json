@@ -20,6 +20,7 @@
     "image": "/events/cyberwise-workshop.jpg",
     "featured": true,
     "registrationOpen": true,
+    "registrationDeadline": "2025-11-08",
     "agenda": [
       "Expert Talks",
       "Hands-on Labs", 
