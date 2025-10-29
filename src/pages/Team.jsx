@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FiMail, FiGithub, FiLinkedin, FiUser, FiUsers, FiAward } from 'react-icons/fi'
+import { FiMail, FiGithub, FiLinkedin, FiUser, FiUsers, FiAward, FiExternalLink } from 'react-icons/fi'
 
 const Team = () => {
   const containerVariants = {
@@ -31,49 +31,55 @@ const Team = () => {
       email: "prasunchandratripathi@iitram.ac.in",
       specialization: "Cybersecurity & Network Security",
       department: "Electrical and Computer Engineering",
-      image: "/team/Prasun Chandra Tripathi.webp"
+      image: "/team/Prasun Chandra Tripathi.webp",
+      website: "http://tinyurl.com/2pmcrum9"
     },
     {
       name: "Dr. Ramnarayan Yadav",
       email: "ramnarayan@iitram.ac.in",
       specialization: "Information Security & Cryptography",
       department: "Electrical and Computer Engineering",
-      image: "/team/Ramnarayan Yadav.webp"
+      image: "/team/Ramnarayan Yadav.webp",
+      website: "https://sites.google.com/site/ramnarayaniitp"
     },
     {
       name: "Dr. Ravi Bhandari",
       email: "ravibhandari@iitram.ac.in",
       specialization: "Digital Forensics & Ethical Hacking",
       department: "Electrical and Computer Engineering",
-      image: "/team/Ravi Bhandari.webp"
+      image: "/team/Ravi Bhandari.webp",
+      website: "https://sites.google.com/view/ravibhandari/"
     },
     {
       name: "Dr. Manoj Choudhuri",
       email: "manojchoudhuri@iitram.ac.in",
       specialization: "Machine Learning Security",
       department: "Basic Sciences",
-      image: "/team/Manoj Choudhuri.jpg"
+      image: "/team/Manoj Choudhuri.jpg",
+      website: "https://www.iitram.ac.in/empdetail/2018244"
     },
     {
       name: "Dr. Sumit Tripathi",
       email: "sumittripathi@iitram.ac.in",
       specialization: "Blockchain & Distributed Systems",
       department: "Mechanical and Aerospace Engineering",
-      image: "/team/Sumit Tripathi.webp"
+      image: "/team/Sumit Tripathi.webp",
+      website: "https://www.iitram.ac.in/empdetail/2018548"
     },
     {
       name: "Dr. Naveet Khanna",
       email: "naveetkhanna@iitram.ac.in",
       specialization: "IoT Security & Privacy",
       department: "Mechanical and Aerospace Engineering",
-      image: "/team/Navneet Khanna.webp"
+      image: "/team/Navneet Khanna.webp",
+      website: "https://www.iitram.ac.in/empdetail/17"
     }
   ]
 
   const students = [
     {
       name: "Prithviraj Verma",
-      oneLiner: "B.Tech Undergrad working in AI/ML and Backend Development",
+      oneLiner: "just a Coffee Addict working in AI/ML and Backend Development",
       role: "Lead Developer & AI Researcher",
       image: "/team/Prithviraj Verma.JPG",
       github: "https://github.com/PR-ODINSON",
@@ -96,7 +102,7 @@ const Team = () => {
       linkedin: "https://www.linkedin.com/in/lakavath-sandeep-a26451320"
     },
     {
-      name: "Tholiya Bhagy Ketanbhai",
+      name: "Tholiya Bhagy",
       oneLiner: "Innovative thinker in cybersecurity and technology",
       role: "Student Member",
       image: "/team/Bhagy Tholiya.webp"
@@ -143,7 +149,7 @@ const Team = () => {
       linkedin: "https://www.linkedin.com/in/lucky-prasad-47256838b"
     },
     {
-      name: "Prajapati Dev Nareshkumar",
+      name: "Prajapati Dev",
       oneLiner: "Passionate developer focused on innovative solutions",
       role: "Student Member",
       image: "/team/DEV PRAJAPATI.jpg", // You may need to add an actual image
@@ -161,7 +167,7 @@ const Team = () => {
     >
       {/* Avatar */}
       <div className="flex items-center justify-center mb-6">
-        <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/60 transition-all duration-300">
+        <div className="w-34 h-34 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/60 transition-all duration-300">
           {mentor.image ? (
             <img 
               src={mentor.image} 
@@ -170,7 +176,7 @@ const Team = () => {
             />
           ) : (
             <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-              <FiUser className="w-12 h-12 text-primary" />
+              <FiUser className="w-16 h-16 text-primary" />
             </div>
           )}
         </div>
@@ -186,15 +192,33 @@ const Team = () => {
         {mentor.department}
       </p>
 
-      {/* Email */}
-      <div className="flex items-center justify-center space-x-2 text-muted-light dark:text-muted-dark hover:text-primary transition-colors duration-300">
-        <FiMail className="w-4 h-4" />
-        <a 
+      {/* Action Buttons */}
+      <div className="flex items-center justify-center space-x-3 mb-4">
+        {/* Email Button */}
+        <a
           href={`mailto:${mentor.email}`}
-          className="text-sm hover:text-primary transition-colors duration-300"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center space-x-2 bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-lg transition-all duration-300 group/btn"
+          title={`Email ${mentor.name}`}
         >
-          {mentor.email}
+          <FiMail className="w-4 h-4 text-primary group-hover/btn:scale-110 transition-transform duration-300" />
+          <span className="text-sm font-medium text-primary">Email</span>
         </a>
+
+        {/* Website Button */}
+        {mentor.website && (
+          <a
+            href={mentor.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center space-x-2 bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-lg transition-all duration-300 group/btn"
+            title={`Visit ${mentor.name}'s website`}
+          >
+            <FiExternalLink className="w-4 h-4 text-primary group-hover/btn:scale-110 transition-transform duration-300" />
+            <span className="text-sm font-medium text-primary">Website</span>
+          </a>
+        )}
       </div>
 
       {/* Mentor Badge */}
