@@ -117,6 +117,15 @@ const Team = () => {
       linkedin: "https://www.linkedin.com/in/dev-krishna-rajkotiya"
     },
     {
+      name: "Dhruv Mulani",
+      oneLiner: "Innovative thinker in cybersecurity and technology",
+      role: "Student Member",
+      image: "/team/DHRUV MULANI.jpg",
+      imagePosition: "object-[center_20%]", // Adjust positioning to show face better
+      github: "https://github.com/DM-Mulani-963",
+      linkedin: "https://www.linkedin.com/in/dhruv-mulani-963x"
+    },
+    {
       name: "Khushan Borse",
       oneLiner: "Committed to building secure digital solutions",
       role: "Student Member",
