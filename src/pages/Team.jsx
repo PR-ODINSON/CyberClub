@@ -29,15 +29,14 @@ const Team = () => {
     {
       name: "Dr. Prasun Chandra Tripathi",
       email: "prasunchandratripathi@iitram.ac.in",
-      specialization: "Cybersecurity & Network Security",
       department: "Electrical and Computer Engineering",
       image: "/team/Prasun Chandra Tripathi.webp",
+      imagePosition: "object-[center_10%]",
       website: "http://tinyurl.com/2pmcrum9"
     },
     {
       name: "Dr. Ramnarayan Yadav",
       email: "ramnarayan@iitram.ac.in",
-      specialization: "Information Security & Cryptography",
       department: "Electrical and Computer Engineering",
       image: "/team/Ramnarayan Yadav.webp",
       website: "https://sites.google.com/site/ramnarayaniitp"
@@ -45,34 +44,49 @@ const Team = () => {
     {
       name: "Dr. Ravi Bhandari",
       email: "ravibhandari@iitram.ac.in",
-      specialization: "Digital Forensics & Ethical Hacking",
       department: "Electrical and Computer Engineering",
       image: "/team/Ravi Bhandari.webp",
+      imagePosition: "object-[center_20%]",
       website: "https://sites.google.com/view/ravibhandari/"
+    },
+    {
+      name: "Dr. Ashish Soni",
+      email: "ashishsoni@iitram.ac.in",
+      department: "Electrical and Computer Engineering",
+      image: "/team/Ashish Soni.jpeg",
+      imagePosition: "object-[center_5%]",
+      website: "https://www.iitram.ac.in/empdetail/12015402"
     },
     {
       name: "Dr. Manoj Choudhuri",
       email: "manojchoudhuri@iitram.ac.in",
-      specialization: "Machine Learning Security",
       department: "Basic Sciences",
       image: "/team/Manoj Choudhuri.jpg",
+      imagePosition: "object-[center_20%]",
       website: "https://www.iitram.ac.in/empdetail/2018244"
     },
     {
       name: "Dr. Sumit Tripathi",
       email: "sumittripathi@iitram.ac.in",
-      specialization: "Blockchain & Distributed Systems",
       department: "Mechanical and Aerospace Engineering",
       image: "/team/Sumit Tripathi.webp",
+      imagePosition: "object-[center_10%]",
       website: "https://www.iitram.ac.in/empdetail/2018548"
     },
     {
       name: "Dr. Naveet Khanna",
       email: "naveetkhanna@iitram.ac.in",
-      specialization: "IoT Security & Privacy",
       department: "Mechanical and Aerospace Engineering",
       image: "/team/Navneet Khanna.webp",
+      imagePosition: "object-[center_20%]",
       website: "https://www.iitram.ac.in/empdetail/17"
+    },
+    {
+      name: "Dr. Ravi Kashikar",
+      email: "ravikashikar@iitram.ac.in",
+      department: "Basic Sciences",
+      image: "/team/Ravi Kashikar.jpg",
+      website: "https://www.iitram.ac.in/empdetail/12015393/"
     }
   ]
 
@@ -181,7 +195,7 @@ const Team = () => {
             <img 
               src={mentor.image} 
               alt={mentor.name}
-              className="w-full h-full object-cover"
+              className={`w-full h-full object-cover ${mentor.imagePosition || ''}`}
             />
           ) : (
             <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
