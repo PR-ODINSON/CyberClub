@@ -50,9 +50,6 @@ const Footer = () => {
                 <div className="text-xl font-heading font-bold text-primary">
                   CyberClub IITRAM
                 </div>
-                <div className="text-sm text-muted-dark">
-                  Guardians of the Campus Network
-                </div>
               </div>
             </Link>
             
@@ -75,7 +72,7 @@ const Footer = () => {
                   onMouseEnter={() => setHover('contact')}
                   onMouseLeave={removeHover}
                 >
-                  prasunchandratripathi@iitram.ac.in
+                  cyberclub@iitram.ac.in
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-muted-dark">

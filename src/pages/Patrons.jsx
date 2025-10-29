@@ -13,7 +13,7 @@ const Patrons = () => {
       id: 'iitram',
       name: 'IITRAM',
       fullName: 'Institute of Infrastructure Technology Research and Management',
-      description: 'A premier autonomous university in Ahmedabad, Gujarat, dedicated to excellence in engineering education and research with a focus on infrastructure technology and management.',
+      description: 'Institute of Infrastructure, Technology, Research And Management has been established by the Government of Gujarat as an Autonomous University and has been mandated to bring about significant change in Engineering Education with respect to Technical and Managerial knowledge in the area of Infrastructure. The objective of this Institute is to serve as a Center of excellence in Research and Teaching in all areas pertaining to Infrastructure, and the Institute has a vision of acquiring a status of National importance in Infrastructure and related areas',
       logo: '/patrons/iitram-logo.png', // TODO: Add actual logo
       website: 'https://iitram.ac.in/',
       established: '2013',
@@ -26,19 +26,18 @@ const Patrons = () => {
         'Strong industry partnerships and collaborations',
         'Research excellence in engineering disciplines'
       ],
-      departments: [
-        'Civil Engineering',
-        'Mechanical Engineering', 
+      discipline: [
+        'Computer Science and Engineering',
         'Electrical Engineering',
-        'Computer Engineering',
-        'Information & Communication Technology',
-        'Chemical Engineering'
+        'Mechanical Engineering', 
+        'Civil Engineering',
+        
       ],
       stats: {
-        students: '2000+',
-        faculty: '100+',
-        research: '200+',
-        patents: '50+'
+        students: '800+',
+        faculty: '50+',
+        research: '120+',
+        patents: '23+'
       },
       gradient: 'from-blue-500 to-cyan-400'
     },
@@ -46,32 +45,29 @@ const Patrons = () => {
       id: 'cawach',
       name: 'CAWACH',
       fullName: 'Centre for Augmenting WAR with COVID-19 Health Crisis',
-      description: 'A flagship initiative by the Department of Science & Technology (DST), Government of India, supporting innovations and startups to combat COVID-19 and future health challenges.',
+      description: 'The "CAWACH Kendra" is the part of Government of Gujarat initiative under the Education Department in collaboration with Home Department to aware college students for Cyber Hygiene, Cyber Crime and Cyber Security and to secure system with end users so as to prevent further cyber-attacks.',
       logo: '/patrons/cawach-logo.png', // TODO: Add actual logo
-      website: 'https://www.nidhi-cawach.com/',
+      website: 'https://cawach.gujgov.edu.in/',
       established: '2020',
       location: 'New Delhi, India',
       type: 'Government Initiative',
       highlights: [
-        'DST, Government of India initiative',
-        'Supporting COVID-19 combat innovations',
-        'Funding and mentoring healthcare startups',
-        'Focus on diagnostics and therapeutics',
-        'Promoting indigenous healthcare solutions'
+        'Achieve heightened cyber awareness',
+        'Implement a comprehensive Master Training Program',
+        'Develop engaging e-content for online safety promotion',
+        'Empower a wider audience through CYBER YUVA social media platforms'
       ],
-      focusAreas: [
-        'Diagnostic Solutions',
-        'Therapeutic Interventions',
-        'Preventive Technologies',
-        'Healthcare Infrastructure',
-        'Digital Health Solutions',
-        'Medical Devices'
+      services: [
+        'Cyber Club Activities',
+        'Women Cyber Safety Wing',
+        'Capsule Module for Online Safety',
+        'Training & Awareness Program',
+        'Lecture Series'
       ],
       stats: {
-        startups: '100+',
-        funding: '₹50Cr+',
-        innovations: '500+',
-        patents: '75+'
+        Activities_Scheduled: '750+',
+        Activities_Performed: '470+',
+        Students_Attended: '45500+'
       },
       gradient: 'from-green-500 to-emerald-400'
     }
@@ -268,10 +264,10 @@ const Patrons = () => {
                     {/* Departments/Focus Areas */}
                     <div>
                       <h3 className="text-lg font-heading font-semibold text-light mb-3">
-                        {patron.departments ? 'Departments' : 'Focus Areas'}
+                        {patron.discipline ? 'Discipline' : 'Services'}
                       </h3>
                       <div className="grid grid-cols-1 gap-2">
-                        {(patron.departments || patron.focusAreas).map((item, idx) => (
+                        {(patron.discipline || patron.services).map((item, idx) => (
                           <motion.div
                             key={idx}
                             className="bg-dark-300/30 border border-primary/20 rounded-lg px-3 py-2 text-sm text-light/90 hover:border-primary/40 hover:bg-primary/5 transition-all duration-300"

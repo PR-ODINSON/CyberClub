@@ -172,7 +172,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-text-light dark:text-text-dark">Email</h3>
-                      <p className="text-muted-light dark:text-muted-dark">prasunchandratripathi@iitram.ac.in</p>
+                      <p className="text-muted-light dark:text-muted-dark">cyberclub@iitram.ac.in</p>
                     </div>
                   </div>
 
