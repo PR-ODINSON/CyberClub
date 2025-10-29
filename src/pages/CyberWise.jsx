@@ -397,7 +397,7 @@ const CyberWise = () => {
                 </div>
               </motion.div>
 
-              {/* Speaker 3: Dr. Sameer Kulkarni */}
+              {/* Speaker 3: Mr. Divyang Vyas */}
               <motion.div
                 variants={itemVariants}
                 className="group perspective-1000"
@@ -407,17 +407,17 @@ const CyberWise = () => {
                   <div className="absolute inset-0 backface-hidden rounded-2xl overflow-hidden border border-primary/20">
                     <div className="relative h-full">
                       <img 
-                        src="/Sameer Kulkarni.jpg" 
-                        alt="Dr. Sameer Kulkarni"
+                        src="/Divyang Vyas.jpeg" 
+                        alt="Mr. Divyang Vyas"
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent" />
                       <div className="absolute bottom-0 left-0 right-0 p-6">
                         <h3 className="text-xl font-heading font-bold text-white mb-1">
-                          Dr. Sameer Kulkarni
+                          Mr. Divyang Vyas
                         </h3>
                         <p className="text-primary text-sm font-semibold">
-                          IIT Gandhinagar
+                        Biz Secure Labs Pvt. Ltd
                         </p>
                       </div>
                     </div>
@@ -427,7 +427,7 @@ const CyberWise = () => {
                   <div className="absolute inset-0 backface-hidden rotate-y-180 bg-dark/95 backdrop-blur-sm rounded-2xl border border-primary/20 p-6 flex flex-col justify-center">
                     <div className="text-center">
                       <h3 className="text-lg font-heading font-bold text-white mb-4">
-                        Dr. Sameer Kulkarni
+                        Mr. Divyang Vyas
                       </h3>
                       <div className="space-y-3 text-sm text-muted-light">
                         <p><strong className="text-primary">Position:</strong> Faculty, Computer Science</p>
