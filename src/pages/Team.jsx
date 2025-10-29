@@ -176,7 +176,7 @@ const Team = () => {
     >
       {/* Avatar */}
       <div className="flex items-center justify-center mb-6">
-        <div className="w-34 h-34 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/60 transition-all duration-300">
+        <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary/60 transition-all duration-300">
           {mentor.image ? (
             <img 
               src={mentor.image} 
@@ -249,7 +249,7 @@ const Team = () => {
     >
       {/* Avatar */}
       <div className="flex items-center justify-center mb-6">
-        <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-accent/30 group-hover:border-accent/60 transition-all duration-300">
+        <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-accent/30 group-hover:border-accent/60 transition-all duration-300">
           {student.image ? (
             <img 
               src={student.image} 
@@ -420,16 +420,16 @@ const Team = () => {
                 <span className="gradient-text">Want to Join Our Team?</span>
               </h3>
               <p className="text-xl text-muted-light dark:text-muted-dark mb-8 max-w-2xl mx-auto">
-                We're always looking for passionate individuals who want to make a difference in cybersecurity. 
-                Whether you're a student, researcher, or industry professional, there's a place for you in our community.
+                We're always looking for passionate individuals who want to make a difference in cybersecurity.
+                Submit your details and we will review your application. 
               </p>
               <motion.a
-                href="/contact"
+                href="https://forms.gle/fyC8fbrgTBBct8576"
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-primary to-accent text-dark font-semibold px-8 py-4 rounded-xl hover:shadow-lg hover:shadow-primary/25 transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span>Get In Touch</span>
+                <span>Join Team</span>
                 <motion.svg
                   className="w-5 h-5"
                   fill="none"

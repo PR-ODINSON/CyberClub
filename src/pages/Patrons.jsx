@@ -12,7 +12,7 @@ const Patrons = () => {
     {
       id: 'iitram',
       name: 'IITRAM',
-      fullName: 'Institute of Infrastructure Technology Research and Management',
+      fullName: 'Institute of Infrastructure, Technology, Research And Management',
       description: 'Institute of Infrastructure, Technology, Research And Management has been established by the Government of Gujarat as an Autonomous University and has been mandated to bring about significant change in Engineering Education with respect to Technical and Managerial knowledge in the area of Infrastructure. The objective of this Institute is to serve as a Center of excellence in Research and Teaching in all areas pertaining to Infrastructure, and the Institute has a vision of acquiring a status of National importance in Infrastructure and related areas',
       logo: '/patrons/iitram-logo.png', // TODO: Add actual logo
       website: 'https://iitram.ac.in/',
@@ -44,12 +44,12 @@ const Patrons = () => {
     {
       id: 'cawach',
       name: 'CAWACH',
-      fullName: 'Centre for Augmenting WAR with COVID-19 Health Crisis',
+      fullName: 'Cybersecurity Awarenesss And Creative Handholding',
       description: 'The "CAWACH Kendra" is the part of Government of Gujarat initiative under the Education Department in collaboration with Home Department to aware college students for Cyber Hygiene, Cyber Crime and Cyber Security and to secure system with end users so as to prevent further cyber-attacks.',
       logo: '/patrons/cawach-logo.png', // TODO: Add actual logo
       website: 'https://cawach.gujgov.edu.in/',
       established: '2020',
-      location: 'New Delhi, India',
+      location: 'Ahmedabad, India',
       type: 'Government Initiative',
       highlights: [
         'Achieve heightened cyber awareness',
