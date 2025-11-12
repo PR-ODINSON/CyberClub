@@ -288,6 +288,42 @@ const CyberWise = () => {
           </div>
         </motion.section>
 
+        {/* Program Schedule Section */}
+        <motion.section 
+          className="py-20 bg-gradient-to-b from-primary/5 to-transparent"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <div className="container-width text-center">
+            <motion.div variants={itemVariants} className="space-y-8">
+              <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6">
+                <span className="gradient-text">Program Schedule</span>
+              </h2>
+              <p className="text-xl text-muted-light dark:text-muted-dark max-w-3xl mx-auto">
+                Get the complete 2-day program schedule with detailed timings, sessions, and speaker information
+              </p>
+              
+              <motion.a
+                href="https://drive.google.com/file/d/1fgpMaEYIxTgWrx7ck_PwHLDB4pSE1V-t/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-400 to-purple-600 hover:from-cyan-300 hover:to-purple-500 text-dark font-bold text-lg px-10 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 hover:scale-105"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FiCalendar className="w-6 h-6" />
+                <span>View Full Schedule (PDF)</span>
+              </motion.a>
+              
+              <p className="text-sm text-muted-light dark:text-muted-dark">
+                Detailed program schedule for both days • November 14-15, 2025
+              </p>
+            </motion.div>
+          </div>
+        </motion.section>
+
         {/* Invited Speakers Section */}
         <motion.section 
           className="py-20 bg-gradient-to-b from-accent/5 to-transparent"
