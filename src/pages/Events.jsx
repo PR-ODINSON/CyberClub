@@ -57,6 +57,7 @@ const Events = () => {
 
   const getEventLink = (event) => {
     if (event.id === 1) return '/events/cyberwise' // CYBERWISE has dedicated page
+    if (event.id === 2) return '/events/netwise' // NETWISE has dedicated page
     return '#' // Other events can link to registration or details
   }
 
@@ -64,7 +65,7 @@ const Events = () => {
     <>
       <Helmet>
         <title>Events – IITRAM Cyber Club</title>
-        <meta name="description" content="Discover upcoming cybersecurity events, workshops, and competitions organized by CyberClub IITRAM." />
+        <meta name="description" content="Discover upcoming and past cybersecurity events, workshops, and competitions organized by CyberClub IITRAM." />
         <meta property="og:title" content="Cybersecurity Events at IITRAM" />
         <meta property="og:description" content="Join our workshops, competitions, and seminars to enhance your cybersecurity skills." />
         <meta property="og:type" content="website" />
@@ -88,7 +89,7 @@ const Events = () => {
           <div className="container-width relative z-10">
             <motion.div variants={itemVariants} className="text-center mb-16">
               <h1 className="text-4xl lg:text-6xl font-heading font-black mb-6">
-                <span className="gradient-text">Upcoming Events</span>
+                <span className="gradient-text">Our Events</span>
               </h1>
               <p className="text-xl lg:text-2xl text-gray-600 dark:text-muted-dark max-w-4xl mx-auto leading-relaxed">
                 Join us for workshops, competitions, and seminars designed to enhance your cybersecurity skills and connect with the community.
@@ -184,12 +185,21 @@ const Events = () => {
                                       Featured
                                     </span>
                                   )}
-                                  <div className="flex items-center space-x-1">
-                                    <div className={`w-2 h-2 rounded-full ${event.registrationOpen ? 'bg-green-400 animate-pulse' : 'bg-yellow-400 animate-pulse'}`} />
-                                    <span className="text-xs text-gray-600 dark:text-muted-dark">
-                                      {event.registrationOpen ? 'Registration Open' : 'Registration Opening Soon'}
-                                    </span>
-                                  </div>
+                                  {event.completed ? (
+                                    <div className="flex items-center space-x-1">
+                                      <FiAward className="w-4 h-4 text-green-400" />
+                                      <span className="text-xs text-green-400 font-semibold">
+                                        Completed Successfully
+                                      </span>
+                                    </div>
+                                  ) : (
+                                    <div className="flex items-center space-x-1">
+                                      <div className={`w-2 h-2 rounded-full ${event.registrationOpen ? 'bg-green-400 animate-pulse' : 'bg-yellow-400 animate-pulse'}`} />
+                                      <span className="text-xs text-gray-600 dark:text-muted-dark">
+                                        {event.registrationOpen ? 'Registration Open' : 'Registration Opening Soon'}
+                                      </span>
+                                    </div>
+                                  )}
                                 </div>
 
                                 <h3 className="text-2xl lg:text-3xl font-heading font-bold mb-3 group-hover:text-primary transition-colors">
@@ -288,25 +298,27 @@ const Events = () => {
                                       onMouseEnter={() => setHover('info')}
                                       onMouseLeave={removeHover}
                                     >
-                                      <span>Learn More</span>
+                                      <span>{event.completed ? 'View Event Details' : 'Learn More'}</span>
                                       <FiArrowRight className="w-5 h-5" />
                                     </Link>
                                   </motion.div>
                                 )}
                                 
-                                <motion.a
-                                  href={event.id === 1 ? "https://forms.cloud.microsoft/r/cd7k3PMp3p?origin=lprLink" : "#"}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className={`inline-flex items-center space-x-2 px-6 py-2 bg-gradient-to-r ${gradient} text-dark font-semibold rounded-lg hover:shadow-lg transition-all duration-300`}
-                                  onMouseEnter={() => setHover('external')}
-                                  onMouseLeave={removeHover}
-                                  whileHover={{ scale: 1.05 }}
-                                  whileTap={{ scale: 0.95 }}
-                                >
-                                  <span>{event.id === 1 ? 'Register Now' : 'Coming Soon'}</span>
-                                  <FiArrowRight className="w-4 h-4" />
-                                </motion.a>
+                                {!event.completed && (
+                                  <motion.a
+                                    href={event.id === 1 ? "https://forms.cloud.microsoft/r/cd7k3PMp3p?origin=lprLink" : "#"}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={`inline-flex items-center space-x-2 px-6 py-2 bg-gradient-to-r ${gradient} text-dark font-semibold rounded-lg hover:shadow-lg transition-all duration-300`}
+                                    onMouseEnter={() => setHover('external')}
+                                    onMouseLeave={removeHover}
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                  >
+                                    <span>{event.registrationOpen ? 'Register Now' : 'Coming Soon'}</span>
+                                    <FiArrowRight className="w-4 h-4" />
+                                  </motion.a>
+                                )}
                               </div>
                             </div>
                           </div>

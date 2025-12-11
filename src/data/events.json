@@ -1,35 +1,5 @@
 [
   {
-    "id": 1,
-    "title": "CYBERWISE – 2-Day Workshop on Cybersecurity for Information Security Expertise",
-    "description": "The CYBERWISE Workshop aims to create awareness and provide hands-on exposure to students, faculty, and staff on various aspects of cybersecurity, cybercrimes, and preventive measures. The two-day event will feature expert talks, interactive discussions, and practical sessions, offering participants the opportunity to experience real-world cybersecurity practices and defense mechanisms.",
-    "date": "2025-11-14",
-    "endDate": "2025-11-15",
-    "time": "09:00",
-    "endTime": "17:00",
-    "location": "IITRAM Campus, Ahmedabad",
-    "type": "Workshop",
-    "category": "Cybersecurity",
-    "organizer": "Cyber Club, IITRAM, Ahmedabad",
-    "sponsor": "CAWACH Kendra, Government of Gujarat",
-    "maxAttendees": 100,
-    "currentAttendees": 0,
-    "difficulty": "All Levels",
-    "prerequisites": ["Basic computer knowledge", "Interest in cybersecurity"],
-    "materials": ["Laptop", "Notebook", "Writing materials"],
-    "image": "/events/cyberwise-workshop.jpg",
-    "featured": true,
-    "registrationOpen": true,
-    "registrationDeadline": "2025-11-08",
-    "agenda": [
-      "Expert Talks",
-      "Hands-on Labs", 
-      "Cybercrime Awareness",
-      "Preventive Techniques"
-    ],
-    "tags": ["Cybersecurity", "Workshop", "Information Security", "CAWACH", "IITRAM"]
-  },
-  {
     "id": 2,
     "title": "NETWISE - Smart & Safe Internet Practices",
     "description": "A program designed to promote responsible and safe internet usage, particularly among students and young professionals, with emphasis on smart internet habits, online fraud prevention, digital ethics, digital footprints management etc.",
@@ -48,7 +18,7 @@
     "prerequisites": ["Basic internet knowledge", "Interest in digital safety"],
     "materials": ["Notebook", "Writing materials"],
     "image": "/events/netwise-seminar.jpg",
-    "featured": false,
+    "featured": true,
     "registrationOpen": false,
     "agenda": [
       "Smart Internet Habits",
@@ -57,5 +27,36 @@
       "Digital Footprint Management"
     ],
     "tags": ["Digital Safety", "Internet Security", "Online Ethics", "Fraud Prevention", "IITRAM"]
+  },
+  {
+    "id": 1,
+    "title": "CYBERWISE – 2-Day Workshop on Cybersecurity for Information Security Expertise",
+    "description": "The CYBERWISE Workshop successfully created awareness and provided hands-on exposure to students, faculty, and staff on various aspects of cybersecurity, cybercrimes, and preventive measures. The two-day event featured expert talks, interactive discussions, and practical sessions, offering participants the opportunity to experience real-world cybersecurity practices and defense mechanisms.",
+    "date": "2025-11-14",
+    "endDate": "2025-11-15",
+    "time": "09:00",
+    "endTime": "17:00",
+    "location": "IITRAM Campus, Ahmedabad",
+    "type": "Workshop",
+    "category": "Cybersecurity",
+    "organizer": "Cyber Club, IITRAM, Ahmedabad",
+    "sponsor": "CAWACH Kendra, Government of Gujarat",
+    "maxAttendees": 100,
+    "currentAttendees": 100,
+    "difficulty": "All Levels",
+    "prerequisites": ["Basic computer knowledge", "Interest in cybersecurity"],
+    "materials": ["Laptop", "Notebook", "Writing materials"],
+    "image": "/events/cyberwise-workshop.jpg",
+    "featured": false,
+    "registrationOpen": false,
+    "registrationDeadline": "2025-11-08",
+    "completed": true,
+    "agenda": [
+      "Expert Talks",
+      "Hands-on Labs", 
+      "Cybercrime Awareness",
+      "Preventive Techniques"
+    ],
+    "tags": ["Cybersecurity", "Workshop", "Information Security", "CAWACH", "IITRAM"]
   }
 ]

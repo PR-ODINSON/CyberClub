@@ -54,24 +54,25 @@ const Home = () => {
     },
   ]
 
-  // CYBERWISE Workshop - Featured Event
+  // NETWISE Seminar - Featured Event
   const upcomingEvents = [
     {
-      id: 1,
-      title: 'CYBERWISE – 2-Day Workshop on Cybersecurity',
-      date: '2025-11-14',
-      endDate: '2025-11-15',
+      id: 2,
+      title: 'NETWISE - Smart & Safe Internet Practices',
+      date: '2026-01-16',
+      endDate: '2026-01-17',
       time: '09:00',
       endTime: '17:00',
       location: 'IITRAM Campus, Ahmedabad',
-      type: 'Workshop',
-      attendees: 200,
-      maxAttendees: 200,
-      description: 'Create awareness and provide hands-on exposure on various aspects of cybersecurity, cybercrimes, and preventive measures.',
+      type: 'Seminar',
+      attendees: 0,
+      maxAttendees: 150,
+      description: 'A program designed to promote responsible and safe internet usage, particularly among students and young professionals.',
       organizer: 'Cyber Club, IITRAM, Ahmedabad',
-      sponsor: 'CAWACH Kendra, Government of Gujarat',
+      sponsor: 'TBD',
       featured: true,
-      agenda: ['Expert Talks', 'Hands-on Labs', 'Cybercrime Awareness', 'Preventive Techniques']
+      registrationOpen: false,
+      agenda: ['Smart Internet Habits', 'Online Fraud Prevention', 'Digital Ethics', 'Digital Footprint Management']
     }
   ]
 
@@ -184,7 +185,7 @@ const Home = () => {
                 >
                   {/* Background Effects */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-green-400/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
                   {/* Animated border */}
                   <motion.div
@@ -203,7 +204,7 @@ const Home = () => {
                         {/* Event Badge & Status */}
                         <div className="flex items-center space-x-4 mb-6">
                           <motion.div
-                            className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-400/20 to-purple-600/20 border border-primary/30"
+                            className="px-4 py-2 rounded-full bg-gradient-to-r from-green-400/20 to-blue-600/20 border border-primary/30"
                             whileHover={{ scale: 1.05 }}
                           >
                             <span className="text-sm font-semibold text-primary">
@@ -211,9 +212,9 @@ const Home = () => {
                             </span>
                           </motion.div>
                           <div className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                            <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
                             <span className="text-sm text-gray-600 dark:text-muted-dark">
-                              Registration Open
+                              Registration Opening Soon
                             </span>
                           </div>
                         </div>
@@ -225,12 +226,12 @@ const Home = () => {
                           transition={{ duration: 0.2 }}
                         >
                           <h3 className="text-4xl lg:text-5xl font-heading font-black mb-2">
-                            <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
-                              CYBERWISE
+                            <span className="bg-gradient-to-r from-green-400 to-blue-600 bg-clip-text text-transparent">
+                              NETWISE
                             </span>
                           </h3>
                           <p className="text-xl text-gray-600 dark:text-muted-dark font-medium">
-                            2-Day Workshop on Cybersecurity
+                            Smart & Safe Internet Practices
                           </p>
                         </motion.div>
 
@@ -243,7 +244,7 @@ const Home = () => {
                       <div className="lg:ml-8 mt-4 lg:mt-0">
                         <div className="bg-dark/10 dark:bg-light/5 backdrop-blur-sm rounded-xl p-4 border border-primary/20">
                           <div className="text-center">
-                            <div className="text-2xl font-bold text-primary mb-1">100</div>
+                            <div className="text-2xl font-bold text-primary mb-1">150</div>
                             <div className="text-sm text-gray-600 dark:text-muted-dark">Seats</div>
                           </div>
                         </div>
@@ -306,7 +307,7 @@ const Home = () => {
 
                     {/* Agenda Highlights */}
                     <div className="mb-8">
-                      <h4 className="font-semibold text-gray-500 dark:text-gray-400 mb-4 text-lg">Workshop Highlights</h4>
+                      <h4 className="font-semibold text-gray-500 dark:text-gray-400 mb-4 text-lg">Seminar Highlights</h4>
                       <div className="grid md:grid-cols-2 gap-3">
                         {event.agenda.map((item, i) => (
                           <motion.div 
@@ -340,8 +341,8 @@ const Home = () => {
                           whileTap={{ scale: 0.95 }}
                         >
                           <Link
-                            to="/events/cyberwise"
-                            className="inline-flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-primary/80 to-accent/80 text-white font-bold rounded-lg hover:from-primary hover:to-accent transition-all duration-300 border-2 border-primary/30 hover:border-primary/60 shadow-lg hover:shadow-primary/25"
+                            to="/events/netwise"
+                            className="inline-flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-green-400 to-blue-600 text-dark font-bold rounded-lg hover:from-green-300 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl"
                             onMouseEnter={() => setHover('info')}
                             onMouseLeave={removeHover}
                           >
@@ -349,20 +350,6 @@ const Home = () => {
                             <FiArrowRight className="w-4 h-4" />
                           </Link>
                         </motion.div>
-                        
-                        <motion.a
-                          href="https://forms.cloud.microsoft/r/cd7k3PMp3p?origin=lprLink"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-cyan-400 to-purple-600 text-dark font-bold rounded-lg hover:from-cyan-300 hover:to-purple-500 transition-all duration-300 shadow-lg hover:shadow-xl"
-                          onMouseEnter={() => setHover('external')}
-                          onMouseLeave={removeHover}
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          <span>Register Now</span>
-                          <FiArrowRight className="w-4 h-4" />
-                        </motion.a>
                       </div>
                     </div>
                   </div>

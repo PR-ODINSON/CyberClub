@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import { FiCalendar, FiMapPin, FiUsers, FiClock, FiAward, FiShield, FiZap, FiTarget, FiCode, FiArrowLeft } from 'react-icons/fi'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import CountdownTimer from '../components/CountdownTimer'
 import eventsData from '../data/events.json'
 
 const CyberWise = () => {
@@ -43,10 +42,10 @@ const CyberWise = () => {
     <>
       <Helmet>
         <title>CYBERWISE Workshop – IITRAM Cyber Club</title>
-        <meta name="description" content="CYBERWISE – A 2-day workshop on Cybersecurity at IITRAM, Ahmedabad sponsored by CAWACH Kendra, Government of Gujarat." />
+        <meta name="description" content="CYBERWISE – A successful 2-day workshop on Cybersecurity at IITRAM, Ahmedabad sponsored by CAWACH Kendra, Government of Gujarat." />
         <meta property="og:title" content="CYBERWISE – Cybersecurity Workshop at IITRAM" />
-        <meta property="og:description" content="Hands-on sessions, expert talks, and cybersecurity awareness organized by CyberClub IITRAM." />
-        <meta property="og:type" content="event" />
+        <meta property="og:description" content="Successfully completed hands-on sessions, expert talks, and cybersecurity awareness organized by CyberClub IITRAM." />
+        <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 
@@ -134,11 +133,14 @@ const CyberWise = () => {
               >
                 {event.description}
               </motion.p>
-            </motion.div>
-
-            {/* Countdown Timer */}
-            <motion.div variants={itemVariants} className="mb-16">
-              <CountdownTimer targetDate="2025-11-14T09:00:00" />
+              
+              {/* Event Completed Badge */}
+              <motion.div variants={itemVariants} className="mt-8">
+                <div className="inline-flex items-center space-x-2 bg-green-500/20 border-2 border-green-500/40 rounded-full px-6 py-3">
+                  <FiAward className="w-5 h-5 text-green-400" />
+                  <span className="text-green-400 font-semibold text-lg">Event Successfully Completed</span>
+                </div>
+              </motion.div>
             </motion.div>
           </div>
         </motion.section>
@@ -616,7 +618,88 @@ const CyberWise = () => {
           </div>
         </motion.section>
 
-        {/* Registration Section */}
+        {/* Event Photo Gallery Section */}
+        <motion.section
+          className="py-20"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <div className="container-width">
+            <motion.div variants={itemVariants} className="text-center mb-12">
+              <h2 className="text-3xl lg:text-5xl font-heading font-black mb-4">
+                <span className="gradient-text">Event Gallery</span>
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-muted-dark max-w-2xl mx-auto">
+                Relive the moments from CYBERWISE 2025
+              </p>
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <div className="card p-6">
+                <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 p-6 border border-primary/20">
+                  <div className="flex gap-4 animate-infinite-scroll">
+                    {/* First set of images */}
+                    {[
+                      'DSC03699.JPG', 'DSC03757.JPG', 'DSC03764.JPG', 'DSC03786.JPG', 
+                      'DSC03789.JPG', 'DSC03798.JPG', 'DSC03814.JPG', 'DSC03817.JPG',
+                      'DSC03820.JPG', 'DSC03825.JPG', 'DSC03837.JPG', 'DSC03874.JPG',
+                      'DSC03908.JPG', 'DSC03930.JPG', 'DSC03937.JPG', 'DSC03942.JPG',
+                      'DSC03946.JPG', 'DSC03948.JPG', 'DSC03950.JPG', 'DSC03957.JPG',
+                      'DSC03963.JPG', 'DSC03972.JPG', 'DSC03976.JPG', 'DSC03989.JPG',
+                      'DSC04022.JPG', 'DSC04032.JPG', 'DSC04035.JPG', 'DSC04037.JPG',
+                      'DSC04046.JPG', 'DSC04054.JPG', 'DSC04061.JPG', 'DSC04089.JPG',
+                      'DSC04118.JPG', 'DSC04124.JPG', 'DSC04241.JPG', 'DSC04245.JPG',
+                      'DSC04269.JPG', 'DSC04275.JPG', 'DSC04282.JPG', 'DSC04286.JPG',
+                      'DSC04311.JPG', 'DSC04314.JPG', 'DSC04328.JPG', 'DSC04336.JPG'
+                    ].map((img, idx) => (
+                      <div key={`img-1-${idx}`} className="flex-shrink-0 h-80 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-primary/40 group">
+                        <img
+                          src={`/Cyberwise/${img}`}
+                          alt={`CYBERWISE Event Photo ${idx + 1}`}
+                          className="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-300 bg-dark/5 dark:bg-light/5"
+                          loading="lazy"
+                        />
+                      </div>
+                    ))}
+                    {/* Duplicate set for seamless infinite loop */}
+                    {[
+                      'DSC03699.JPG', 'DSC03757.JPG', 'DSC03764.JPG', 'DSC03786.JPG', 
+                      'DSC03789.JPG', 'DSC03798.JPG', 'DSC03814.JPG', 'DSC03817.JPG',
+                      'DSC03820.JPG', 'DSC03825.JPG', 'DSC03837.JPG', 'DSC03874.JPG',
+                      'DSC03908.JPG', 'DSC03930.JPG', 'DSC03937.JPG', 'DSC03942.JPG',
+                      'DSC03946.JPG', 'DSC03948.JPG', 'DSC03950.JPG', 'DSC03957.JPG',
+                      'DSC03963.JPG', 'DSC03972.JPG', 'DSC03976.JPG', 'DSC03989.JPG',
+                      'DSC04022.JPG', 'DSC04032.JPG', 'DSC04035.JPG', 'DSC04037.JPG',
+                      'DSC04046.JPG', 'DSC04054.JPG', 'DSC04061.JPG', 'DSC04089.JPG',
+                      'DSC04118.JPG', 'DSC04124.JPG', 'DSC04241.JPG', 'DSC04245.JPG',
+                      'DSC04269.JPG', 'DSC04275.JPG', 'DSC04282.JPG', 'DSC04286.JPG',
+                      'DSC04311.JPG', 'DSC04314.JPG', 'DSC04328.JPG', 'DSC04336.JPG'
+                    ].map((img, idx) => (
+                      <div key={`img-2-${idx}`} className="flex-shrink-0 h-80 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-primary/40 group">
+                        <img
+                          src={`/Cyberwise/${img}`}
+                          alt={`CYBERWISE Event Photo ${idx + 1}`}
+                          className="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-300 bg-dark/5 dark:bg-light/5"
+                          loading="lazy"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  {/* Gradient fade edges */}
+                  <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white dark:from-dark-300 to-transparent pointer-events-none z-10" />
+                  <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white dark:from-dark-300 to-transparent pointer-events-none z-10" />
+                </div>
+                <p className="text-sm text-gray-600 dark:text-muted-dark mt-4 text-center">
+                  Event photos from CYBERWISE 2025
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </motion.section>
+
+        {/* CTA Section */}
         <motion.section 
           className="py-20 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10"
           variants={containerVariants}
@@ -625,48 +708,22 @@ const CyberWise = () => {
           viewport={{ once: true, margin: "-100px" }}
         >
           <div className="container-width text-center">
-            <motion.div variants={itemVariants} className="space-y-8">
-              <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6">
-                <span className="gradient-text">Secure Your Spot</span>
-              </h2>
-              <p className="text-xl text-light max-w-3xl mx-auto leading-relaxed">
-                Don't miss this opportunity to enhance your cybersecurity knowledge and connect with like-minded professionals.
-              </p>
-              
-              <motion.a
-                href="https://forms.cloud.microsoft/r/cd7k3PMp3p?origin=lprLink"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-gradient-to-r from-cyan-400 to-purple-600 hover:from-cyan-300 hover:to-purple-500 text-dark font-bold text-lg px-12 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 hover:scale-105"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Register Now
-              </motion.a>
-              
-              <p className="text-sm text-muted-light dark:text-muted-dark">
-                Limited seats available • Free registration • Registration Deadline: November 8, 2025
-              </p>
-            </motion.div>
-          </div>
-        </motion.section>
-
-        {/* CTA Section */}
-        <motion.section 
-          className="py-20"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          <div className="container-width text-center">
             <motion.div variants={itemVariants} className="space-y-6">
               <h2 className="text-3xl lg:text-4xl font-heading font-bold text-light">
-                Join us in CYBERWISE — where awareness meets action.
+                CYBERWISE — where awareness met action.
               </h2>
-              <p className="text-xl text-primary font-semibold">
-                Be part of IITRAM's journey towards a secure digital future.
+              <p className="text-xl text-muted-light dark:text-muted-dark max-w-3xl mx-auto">
+                Thank you to all participants, speakers, and sponsors for making this event a grand success. Stay tuned for more exciting events from IITRAM Cyber Club.
               </p>
+              <div className="pt-4">
+                <Link
+                  to="/events"
+                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-400 to-purple-600 hover:from-cyan-300 hover:to-purple-500 text-dark font-bold text-lg px-10 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/25"
+                >
+                  <span>View Upcoming Events</span>
+                  <FiArrowLeft className="w-5 h-5 rotate-180" />
+                </Link>
+              </div>
             </motion.div>
           </div>
         </motion.section>
