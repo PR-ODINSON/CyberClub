@@ -78,6 +78,70 @@ const Home = () => {
 
   return (
     <div ref={containerRef} className="relative">
+      {/* News Ticker / Media Coverage Banner - Below Navbar */}
+      <motion.section 
+        className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 border-b border-primary/20 py-3 overflow-hidden sticky top-20 z-40"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+      >
+        <div className="container-width">
+          <div className="flex items-center space-x-4">
+            {/* Label */}
+            <div className="flex-shrink-0 flex items-center space-x-2 bg-primary/20 px-3 py-1.5 rounded-full border border-primary/40">
+              <FiShield className="w-3.5 h-3.5 text-primary animate-pulse" />
+              <span className="text-xs font-bold text-primary uppercase tracking-wider">In The News</span>
+            </div>
+            
+            {/* Scrolling News */}
+            <div className="flex-1 overflow-hidden">
+              <motion.div 
+                className="flex space-x-8 whitespace-nowrap"
+                animate={{ x: [0, -1000] }}
+                transition={{
+                  duration: 30,
+                  repeat: Infinity,
+                  ease: "linear"
+                }}
+              >
+                {/* Repeat items for continuous scroll */}
+                {[1, 2].map((iteration) => (
+                  <div key={iteration} className="flex space-x-8">
+                    <a 
+                      href="https://english.khabarpatri.com/2025/11/18/iitram-presents-cyberwise-2025-a-workshop-on-cybersecurity-for-information-security-professionals/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-3 hover:text-primary transition-colors group"
+                    >
+                      <span className="text-accent font-semibold text-sm">📰 Khabar Patri:</span>
+                      <span className="text-gray-700 dark:text-muted-dark group-hover:text-primary transition-colors text-sm">
+                        IITRAM Presents CYBERWISE 2025 - A Workshop on Cybersecurity for Information Security Professionals
+                      </span>
+                    </a>
+                    
+                    <span className="text-primary/40">•</span>
+                    
+                    <a 
+                      href="https://navjeevanexpress.com/iitrams-cyberwise-2025-national-workshop-builds-next-gen-cyber-defenders/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-3 hover:text-primary transition-colors group"
+                    >
+                      <span className="text-accent font-semibold text-sm">📰 Navjeevan Express:</span>
+                      <span className="text-gray-700 dark:text-muted-dark group-hover:text-primary transition-colors text-sm">
+                        IITRAM's CYBERWISE 2025 National Workshop Builds Next-Gen Cyber Defenders
+                      </span>
+                    </a>
+                    
+                    <span className="text-primary/40">•</span>
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
       {/* Hero Section */}
       <Hero />
 

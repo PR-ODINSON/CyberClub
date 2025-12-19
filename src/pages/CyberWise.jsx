@@ -654,12 +654,14 @@ const CyberWise = () => {
                       'DSC04269.JPG', 'DSC04275.JPG', 'DSC04282.JPG', 'DSC04286.JPG',
                       'DSC04311.JPG', 'DSC04314.JPG', 'DSC04328.JPG', 'DSC04336.JPG'
                     ].map((img, idx) => (
-                      <div key={`img-1-${idx}`} className="flex-shrink-0 h-80 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-primary/40 group">
+                      <div key={`img-1-${idx}`} className="flex-shrink-0 h-64 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-primary/40 group bg-gray-200 dark:bg-gray-800">
                         <img
                           src={`/Cyberwise/${img}`}
                           alt={`CYBERWISE Event Photo ${idx + 1}`}
-                          className="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-300 bg-dark/5 dark:bg-light/5"
+                          className="h-full w-auto object-cover group-hover:scale-105 transition-transform duration-300"
                           loading="lazy"
+                          decoding="async"
+                          fetchPriority={idx < 5 ? "high" : "low"}
                         />
                       </div>
                     ))}
@@ -677,12 +679,14 @@ const CyberWise = () => {
                       'DSC04269.JPG', 'DSC04275.JPG', 'DSC04282.JPG', 'DSC04286.JPG',
                       'DSC04311.JPG', 'DSC04314.JPG', 'DSC04328.JPG', 'DSC04336.JPG'
                     ].map((img, idx) => (
-                      <div key={`img-2-${idx}`} className="flex-shrink-0 h-80 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-primary/40 group">
+                      <div key={`img-2-${idx}`} className="flex-shrink-0 h-64 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-primary/40 group bg-gray-200 dark:bg-gray-800">
                         <img
                           src={`/Cyberwise/${img}`}
                           alt={`CYBERWISE Event Photo ${idx + 1}`}
-                          className="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-300 bg-dark/5 dark:bg-light/5"
+                          className="h-full w-auto object-cover group-hover:scale-105 transition-transform duration-300"
                           loading="lazy"
+                          decoding="async"
+                          fetchPriority="low"
                         />
                       </div>
                     ))}
@@ -694,6 +698,86 @@ const CyberWise = () => {
                 <p className="text-sm text-gray-600 dark:text-muted-dark mt-4 text-center">
                   Event photos from CYBERWISE 2025
                 </p>
+              </div>
+            </motion.div>
+          </div>
+        </motion.section>
+
+        {/* Media Coverage Section */}
+        <motion.section 
+          className="py-20 bg-gradient-to-b from-accent/5 to-transparent"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <div className="container-width">
+            <motion.div variants={itemVariants} className="text-center mb-12">
+              <h2 className="text-3xl lg:text-5xl font-heading font-black mb-4">
+                <span className="gradient-text">Media Coverage</span>
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-muted-dark max-w-2xl mx-auto">
+                CYBERWISE 2025 in the News • Featured in leading publications
+              </p>
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                {/* Article 1 - Khabar Patri */}
+                <motion.a
+                  href="https://english.khabarpatri.com/2025/11/18/iitram-presents-cyberwise-2025-a-workshop-on-cybersecurity-for-information-security-professionals/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group card p-6 hover:shadow-2xl transition-all duration-300"
+                  whileHover={{ scale: 1.03, y: -5 }}
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/30 transition-colors">
+                      <FiAward className="w-6 h-6 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-xs font-semibold text-accent mb-2">Khabar Patri</div>
+                      <h3 className="text-lg font-heading font-bold text-light mb-3 group-hover:text-primary transition-colors">
+                        IITRAM Presents CYBERWISE 2025: A Workshop on Cybersecurity for Information Security Professionals
+                      </h3>
+                      <p className="text-sm text-muted-light dark:text-muted-dark mb-4 line-clamp-3">
+                        The CAWACH Kendra, Government of Gujarat–supported CYBERWISE 2025 workshop held at IITRAM brought together leading researchers, experts, and students to discuss critical cybersecurity challenges.
+                      </p>
+                      <div className="flex items-center text-primary text-sm font-semibold">
+                        <span>Read Full Article</span>
+                        <FiArrowLeft className="w-4 h-4 ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </div>
+                </motion.a>
+
+                {/* Article 2 - Navjeevan Express */}
+                <motion.a
+                  href="https://navjeevanexpress.com/iitrams-cyberwise-2025-national-workshop-builds-next-gen-cyber-defenders/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group card p-6 hover:shadow-2xl transition-all duration-300"
+                  whileHover={{ scale: 1.03, y: -5 }}
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-accent/30 transition-colors">
+                      <FiShield className="w-6 h-6 text-accent" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-xs font-semibold text-accent mb-2">Navjeevan Express</div>
+                      <h3 className="text-lg font-heading font-bold text-light mb-3 group-hover:text-primary transition-colors">
+                        IITRAM's CYBERWISE 2025 National Workshop Builds Next-Gen Cyber Defenders
+                      </h3>
+                      <p className="text-sm text-muted-light dark:text-muted-dark mb-4 line-clamp-3">
+                        IITRAM successfully hosted CYBERWISE–2025, a national workshop focused on building the next generation of cyber defenders as threats become faster, stealthier and more sophisticated.
+                      </p>
+                      <div className="flex items-center text-primary text-sm font-semibold">
+                        <span>Read Full Article</span>
+                        <FiArrowLeft className="w-4 h-4 ml-2 rotate-180 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </div>
+                </motion.a>
               </div>
             </motion.div>
           </div>
