@@ -427,7 +427,7 @@ const Home = () => {
                           whileTap={{ scale: 0.95 }}
                         >
                           <Link
-                            to="/events/netwise"
+                            to="/events/infracyberwise"
                             className="inline-flex items-center space-x-2 px-8 py-3 bg-dark/10 dark:bg-light/5 text-primary font-bold rounded-lg hover:bg-dark/20 dark:hover:bg-light/10 transition-all duration-300 border-2 border-primary/30"
                             onMouseEnter={() => setHover('info')}
                             onMouseLeave={removeHover}

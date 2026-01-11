@@ -118,7 +118,7 @@ const AppContent = () => {
               <Route path="/team" element={<Team />} />
               <Route path="/events" element={<Events />} />
               <Route path="/events/cyberwise" element={<CyberWise />} />
-              <Route path="/events/netwise" element={<NetWise />} />
+              <Route path="/events/infracyberwise" element={<NetWise />} />
               <Route path="/patrons" element={<Patrons />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy" element={<Privacy />} />
