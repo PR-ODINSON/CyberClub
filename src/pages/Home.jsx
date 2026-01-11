@@ -54,25 +54,26 @@ const Home = () => {
     },
   ]
 
-  // NETWISE Seminar - Featured Event
+  // INFRA CYBERWISE 2026 - Featured Event
   const upcomingEvents = [
     {
       id: 2,
-      title: 'NETWISE - Smart & Safe Internet Practices',
-      date: '2026-01-16',
-      endDate: '2026-01-17',
+      title: 'INFRA CYBERWISE 2026 - Infrastructure Cybersecurity Workshop',
+      date: '2026-01-30',
+      endDate: '2026-01-31',
       time: '09:00',
       endTime: '17:00',
       location: 'IITRAM Campus, Ahmedabad',
-      type: 'Seminar',
+      type: 'Workshop',
       attendees: 0,
       maxAttendees: 150,
-      description: 'A program designed to promote responsible and safe internet usage, particularly among students and young professionals.',
+      description: 'A comprehensive workshop bringing together students, faculty, and industry professionals to explore cybersecurity challenges and protection strategies for critical infrastructure systems.',
       organizer: 'Cyber Club, IITRAM, Ahmedabad',
-      sponsor: 'TBD',
+      sponsor: 'CAWACH Kendra, Government of Gujarat',
       featured: true,
-      registrationOpen: false,
-      agenda: ['Smart Internet Habits', 'Online Fraud Prevention', 'Digital Ethics', 'Digital Footprint Management']
+      registrationOpen: true,
+      registrationLink: 'https://forms.cloud.microsoft/r/cd7k3PMp3p',
+      agenda: ['Infrastructure Resilience', 'Cyber Risk Management', 'Safety Practices', 'Incident Response']
     }
   ]
 
@@ -275,12 +276,17 @@ const Home = () => {
                               {event.type} • 2 Days
                             </span>
                           </motion.div>
-                          <div className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
-                            <span className="text-sm text-gray-600 dark:text-muted-dark">
-                              Registration Opening Soon
+                          <a
+                            href={event.registrationLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center space-x-2 hover:scale-105 transition-transform"
+                          >
+                            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                            <span className="text-sm text-green-400 font-semibold hover:text-green-300">
+                              Registration Open
                             </span>
-                          </div>
+                          </a>
                         </div>
 
                         {/* Event Title */}
@@ -291,11 +297,11 @@ const Home = () => {
                         >
                           <h3 className="text-4xl lg:text-5xl font-heading font-black mb-2">
                             <span className="bg-gradient-to-r from-green-400 to-blue-600 bg-clip-text text-transparent">
-                              NETWISE
+                              INFRA CYBERWISE 2026
                             </span>
                           </h3>
                           <p className="text-xl text-gray-600 dark:text-muted-dark font-medium">
-                            Smart & Safe Internet Practices
+                            Infrastructure Cybersecurity Workshop
                           </p>
                         </motion.div>
 
@@ -371,7 +377,7 @@ const Home = () => {
 
                     {/* Agenda Highlights */}
                     <div className="mb-8">
-                      <h4 className="font-semibold text-gray-500 dark:text-gray-400 mb-4 text-lg">Seminar Highlights</h4>
+                      <h4 className="font-semibold text-gray-500 dark:text-gray-400 mb-4 text-lg">Workshop Focus Areas</h4>
                       <div className="grid md:grid-cols-2 gap-3">
                         {event.agenda.map((item, i) => (
                           <motion.div 
@@ -404,9 +410,25 @@ const Home = () => {
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                         >
+                          <a
+                            href={event.registrationLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-green-400 to-blue-600 text-dark font-bold rounded-lg hover:from-green-300 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl"
+                            onMouseEnter={() => setHover('register')}
+                            onMouseLeave={removeHover}
+                          >
+                            <span>Register Now</span>
+                            <FiArrowRight className="w-4 h-4" />
+                          </a>
+                        </motion.div>
+                        <motion.div
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
                           <Link
                             to="/events/netwise"
-                            className="inline-flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-green-400 to-blue-600 text-dark font-bold rounded-lg hover:from-green-300 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl"
+                            className="inline-flex items-center space-x-2 px-8 py-3 bg-dark/10 dark:bg-light/5 text-primary font-bold rounded-lg hover:bg-dark/20 dark:hover:bg-light/10 transition-all duration-300 border-2 border-primary/30"
                             onMouseEnter={() => setHover('info')}
                             onMouseLeave={removeHover}
                           >

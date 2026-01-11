@@ -1,32 +1,33 @@
 [
   {
     "id": 2,
-    "title": "NETWISE - Smart & Safe Internet Practices",
-    "description": "A program designed to promote responsible and safe internet usage, particularly among students and young professionals, with emphasis on smart internet habits, online fraud prevention, digital ethics, digital footprints management etc.",
-    "date": "2026-01-16",
-    "endDate": "2026-01-17",
+    "title": "INFRA CYBERWISE 2026 - Infrastructure Cybersecurity Workshop",
+    "description": "A comprehensive workshop bringing together students, faculty, and industry professionals to explore cybersecurity challenges and protection strategies for critical infrastructure systems including power, transportation, communication, and industrial control systems.",
+    "date": "2026-01-30",
+    "endDate": "2026-01-31",
     "time": "09:00",
     "endTime": "17:00",
     "location": "IITRAM Campus, Ahmedabad",
-    "type": "Seminar",
-    "category": "Digital Safety",
+    "type": "Workshop",
+    "category": "Infrastructure Security",
     "organizer": "Cyber Club, IITRAM, Ahmedabad",
-    "sponsor": "TBD",
+    "sponsor": "CAWACH Kendra, Government of Gujarat",
     "maxAttendees": 150,
     "currentAttendees": 0,
     "difficulty": "All Levels",
-    "prerequisites": ["Basic internet knowledge", "Interest in digital safety"],
-    "materials": ["Notebook", "Writing materials"],
+    "prerequisites": ["Basic cybersecurity knowledge", "Interest in infrastructure security"],
+    "materials": ["Laptop", "Notebook", "Writing materials"],
     "image": "/events/netwise-seminar.jpg",
     "featured": true,
-    "registrationOpen": false,
+    "registrationOpen": true,
+    "registrationLink": "https://forms.cloud.microsoft/r/cd7k3PMp3p",
     "agenda": [
-      "Smart Internet Habits",
-      "Online Fraud Prevention", 
-      "Digital Ethics",
-      "Digital Footprint Management"
+      "Infrastructure Resilience",
+      "Cyber Risk Management", 
+      "Safety Practices",
+      "Incident Response"
     ],
-    "tags": ["Digital Safety", "Internet Security", "Online Ethics", "Fraud Prevention", "IITRAM"]
+    "tags": ["Infrastructure Security", "Critical Infrastructure", "Cybersecurity", "ICS", "SCADA", "IITRAM"]
   },
   {
     "id": 1,
