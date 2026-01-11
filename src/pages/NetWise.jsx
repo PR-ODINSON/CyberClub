@@ -147,13 +147,13 @@ const NetWise = () => {
                 transition={{ type: 'spring', stiffness: 300, damping: 20 }}
               >
                 <div className="bg-gradient-to-r from-green-400 to-blue-600 p-1 rounded-2xl">
-                  <div className="bg-dark rounded-2xl px-8 py-4">
-                    <h1 className="text-4xl lg:text-6xl font-heading font-black mb-2">
+                  <div className="bg-dark rounded-2xl px-4 sm:px-8 py-4">
+                    <h1 className="text-3xl sm:text-4xl lg:text-6xl font-heading font-black mb-2">
                       <span className="bg-gradient-to-r from-green-400 to-blue-600 bg-clip-text text-transparent">
                         INFRA CYBERWISE 2026
                       </span>
                     </h1>
-                    <p className="text-lg text-muted-light dark:text-muted-dark">
+                    <p className="text-base sm:text-lg text-muted-light dark:text-muted-dark">
                       Infrastructure Cybersecurity Workshop
                     </p>
                   </div>
@@ -162,28 +162,31 @@ const NetWise = () => {
 
               <motion.h2 
                 variants={itemVariants}
-                className="text-2xl lg:text-3xl font-heading font-bold text-light mb-6"
+                className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-light mb-6 px-4"
               >
                 Securing Critical Infrastructure Systems Against Modern Cyber Threats
               </motion.h2>
 
               <motion.p 
                 variants={itemVariants}
-                className="text-lg lg:text-xl text-muted-light dark:text-muted-dark max-w-4xl mx-auto leading-relaxed"
+                className="text-base sm:text-lg lg:text-xl text-muted-light dark:text-muted-dark max-w-4xl mx-auto leading-relaxed px-4"
               >
                 {event?.description}
               </motion.p>
               
               {/* Registration Open Badge */}
-              <motion.div variants={itemVariants} className="mt-8">
+              <motion.div variants={itemVariants} className="mt-8 px-4">
                 <a 
                   href="https://forms.cloud.microsoft/r/cd7k3PMp3p" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 bg-green-500/20 border-2 border-green-500/40 rounded-full px-6 py-3 hover:bg-green-500/30 hover:border-green-500/60 transition-all duration-300"
+                  className="inline-flex items-center justify-center space-x-2 bg-green-500/20 border-2 border-green-500/40 rounded-full px-4 sm:px-6 py-3 hover:bg-green-500/30 hover:border-green-500/60 transition-all duration-300 min-h-[48px]"
                 >
-                  <FiAlertCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-green-400 font-semibold text-lg">Registration Now Open - Click to Register</span>
+                  <FiAlertCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                  <span className="text-green-400 font-semibold text-sm sm:text-base lg:text-lg text-center">
+                    <span className="hidden sm:inline">Registration Now Open - Click to Register</span>
+                    <span className="sm:hidden">Register Now</span>
+                  </span>
                 </a>
               </motion.div>
             </motion.div>
@@ -199,17 +202,17 @@ const NetWise = () => {
           viewport={{ once: true, margin: "-100px" }}
         >
           <div className="container-width">
-            <motion.div variants={itemVariants} className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6">
+            <motion.div variants={itemVariants} className="text-center mb-16 px-4">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-6">
                 <span className="gradient-text">Event Details</span>
               </h2>
             </motion.div>
 
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
               {/* Left Column - Key Info */}
               <motion.div variants={itemVariants} className="space-y-8">
-                <div className="bg-dark/50 dark:bg-light/5 backdrop-blur-sm rounded-2xl p-8 border border-primary/20">
-                  <h3 className="text-2xl font-heading font-bold text-light mb-6">Key Information</h3>
+                <div className="bg-dark/50 dark:bg-light/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-primary/20">
+                  <h3 className="text-xl sm:text-2xl font-heading font-bold text-light mb-6">Key Information</h3>
                   
                   <div className="space-y-6">
                     <div className="flex items-start space-x-4">
@@ -257,8 +260,8 @@ const NetWise = () => {
 
               {/* Right Column - Organizers */}
               <motion.div variants={itemVariants} className="space-y-8">
-                <div className="bg-dark/50 dark:bg-light/5 backdrop-blur-sm rounded-2xl p-8 border border-primary/20">
-                  <h3 className="text-2xl font-heading font-bold text-light mb-6">Organizers</h3>
+                <div className="bg-dark/50 dark:bg-light/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-primary/20">
+                  <h3 className="text-xl sm:text-2xl font-heading font-bold text-light mb-6">Organizers</h3>
                   
                   <div className="space-y-6">
                     <div>
@@ -298,11 +301,11 @@ const NetWise = () => {
           viewport={{ once: true, margin: "-100px" }}
         >
           <div className="container-width">
-            <motion.div variants={itemVariants} className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6">
+            <motion.div variants={itemVariants} className="text-center mb-16 px-4">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-6">
                 <span className="gradient-text">Workshop Focus Areas</span>
               </h2>
-              <p className="text-xl text-muted-light dark:text-muted-dark max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl text-muted-light dark:text-muted-dark max-w-3xl mx-auto">
                 Explore critical topics in infrastructure cybersecurity through expert-led sessions
               </p>
             </motion.div>
@@ -344,37 +347,38 @@ const NetWise = () => {
           viewport={{ once: true, margin: "-100px" }}
         >
           <div className="container-width">
-            <motion.div variants={itemVariants} className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6">
+            <motion.div variants={itemVariants} className="text-center mb-16 px-4">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-6">
                 <span className="gradient-text">Expert Speakers</span>
               </h2>
-              <p className="text-xl text-muted-light dark:text-muted-dark max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl text-muted-light dark:text-muted-dark max-w-3xl mx-auto">
                 Learn from leading experts in infrastructure cybersecurity and critical systems protection
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 sm:gap-8">
               {speakers.map((speaker, index) => (
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  className="group perspective-1000"
+                  className="group perspective-1000 touch-manipulation"
                 >
-                  <div className="relative w-full h-80 transform-style-preserve-3d transition-transform duration-700 group-hover:rotate-y-180">
+                  <div className="relative w-full h-80 transform-style-preserve-3d transition-transform duration-700 group-hover:rotate-y-180 group-active:rotate-y-180">
                     {/* Front of card */}
-                    <div className="absolute inset-0 backface-hidden rounded-2xl overflow-hidden border border-primary/20">
+                    <div className="absolute inset-0 backface-hidden rounded-2xl overflow-hidden border border-primary/20 shadow-lg">
                       <div className="relative h-full">
                         <img 
                           src={speaker.photo}
                           alt={speaker.name}
                           className="w-full h-full object-cover"
+                          loading="lazy"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent" />
-                        <div className="absolute bottom-0 left-0 right-0 p-6">
-                          <h3 className="text-xl font-heading font-bold text-white mb-1">
+                        <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+                          <h3 className="text-lg sm:text-xl font-heading font-bold text-white mb-1">
                             {speaker.name}
                           </h3>
-                          <p className="text-primary text-sm font-semibold">
+                          <p className="text-primary text-xs sm:text-sm font-semibold line-clamp-2">
                             {speaker.affiliation}
                           </p>
                         </div>
@@ -423,17 +427,17 @@ const NetWise = () => {
         >
           <div className="container-width">
             <motion.div variants={itemVariants} className="space-y-12">
-              <div className="text-center">
-                <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6">
+              <div className="text-center px-4">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-6">
                   <span className="gradient-text">About the Workshop</span>
                 </h2>
               </div>
               
-              <div className="bg-dark/50 dark:bg-light/5 backdrop-blur-sm rounded-2xl p-8 lg:p-12 border border-primary/20">
-                <p className="text-lg text-muted-light dark:text-muted-dark leading-relaxed mb-8">
+              <div className="bg-dark/50 dark:bg-light/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-12 border border-primary/20">
+                <p className="text-base sm:text-lg text-muted-light dark:text-muted-dark leading-relaxed mb-8">
                   INFRA CYBERWISE: Infrastructure Cybersecurity Workshop aims to bring together students, faculty members, and industry professionals to explore the evolving cybersecurity challenges and protection strategies related to critical infrastructure systems. The workshop focuses on safeguarding essential infrastructure such as power, transportation, communication, and industrial control systems against modern cyber threats.
                 </p>
-                <p className="text-lg text-muted-light dark:text-muted-dark leading-relaxed">
+                <p className="text-base sm:text-lg text-muted-light dark:text-muted-dark leading-relaxed">
                   By addressing topics including infrastructure resilience, cyber risk management, safety practices, and incident response, INFRA CYBERWISE highlights the importance of securing nation-critical assets in an increasingly digital world. Through expert lectures, real-world case studies, and interactive sessions, the workshop seeks to enhance awareness, technical understanding, and preparedness to build robust, secure, and resilient infrastructure ecosystems.
                 </p>
               </div>
@@ -451,24 +455,24 @@ const NetWise = () => {
         >
           <div className="container-width">
             <motion.div variants={itemVariants} className="space-y-12">
-              <div className="text-center">
-                <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6">
+              <div className="text-center px-4">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-6">
                   <span className="gradient-text">Objective</span>
                 </h2>
               </div>
               
-              <div className="bg-dark/50 dark:bg-light/5 backdrop-blur-sm rounded-2xl p-8 lg:p-12 border border-primary/20">
-                <p className="text-lg text-muted-light dark:text-muted-dark leading-relaxed">
+              <div className="bg-dark/50 dark:bg-light/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-12 border border-primary/20">
+                <p className="text-base sm:text-lg text-muted-light dark:text-muted-dark leading-relaxed">
                   The primary objective of INFRA CYBERWISE: Infrastructure Cybersecurity Workshop is to empower participants with essential knowledge and practical insights into securing critical infrastructure systems against evolving cyber threats. The workshop focuses on enhancing awareness of infrastructure-specific cyber risks, strengthening technical competence in identifying vulnerabilities, and implementing effective mitigation and resilience strategies. It aims to bridge the gap between theoretical concepts and real-world infrastructure security challenges through expert-led sessions, case studies, and interactive discussions. INFRA CYBERWISE seeks to prepare participants to contribute effectively to the protection, reliability, and resilience of critical infrastructure in a digitally interconnected environment.
                 </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 pt-4 px-4">
                 <a
                   href="https://forms.cloud.microsoft/r/cd7k3PMp3p"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-400 to-blue-600 hover:from-green-300 hover:to-blue-500 text-dark font-bold text-lg px-10 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/25"
+                  className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-green-400 to-blue-600 hover:from-green-300 hover:to-blue-500 text-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 min-h-[56px]"
                 >
                   <span>Register Now</span>
                   <FiArrowLeft className="w-5 h-5 rotate-180" />
@@ -476,7 +480,7 @@ const NetWise = () => {
                 
                 <Link
                   to="/events"
-                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-400/20 to-blue-600/20 hover:from-green-400/30 hover:to-blue-600/30 text-primary font-bold text-lg px-10 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 border-2 border-green-400/40"
+                  className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-green-400/20 to-blue-600/20 hover:from-green-400/30 hover:to-blue-600/30 text-primary font-bold text-base sm:text-lg px-8 sm:px-10 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 border-2 border-green-400/40 min-h-[56px]"
                 >
                   <FiArrowLeft className="w-5 h-5 rotate-180" />
                   <span>View All Events</span>
@@ -494,12 +498,12 @@ const NetWise = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          <div className="container-width text-center">
+          <div className="container-width text-center px-4">
             <motion.div variants={itemVariants} className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-light">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-light">
                 INFRA CYBERWISE 2026 — Securing the backbone of our digital world.
               </h2>
-              <p className="text-xl text-green-400 font-semibold">
+              <p className="text-lg sm:text-xl text-green-400 font-semibold">
                 Join IITRAM Cyber Club in protecting critical infrastructure for a secure future.
               </p>
             </motion.div>
