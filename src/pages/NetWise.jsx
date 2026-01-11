@@ -24,7 +24,7 @@ const NetWise = () => {
     },
     {
       name: 'Dr. Chintan Patel',
-      affiliation: 'Kaushlya',
+      affiliation: 'Kaushalya - The Skill University',
       photo: '/chintan.jpg',
       linkedin: '#'
     },
