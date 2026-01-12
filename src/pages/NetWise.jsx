@@ -29,7 +29,7 @@ const NetWise = () => {
       linkedin: '#'
     },
     {
-      name: 'Dr. Soumya Maity',
+      name: 'Dr. Soumyo Maity',
       affiliation: 'Dell',
       photo: '/soumya_maity.jpg',
       linkedin: '#'
