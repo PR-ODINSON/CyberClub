@@ -30,8 +30,8 @@ const NetWise = () => {
     },
     {
       name: 'Dr. Soumyo Maity',
-      affiliation: 'Dell',
-      photo: '/soumya_maity.jpg',
+      affiliation: 'Dell Technologies',
+      photo: '/soumyo_maity - Copy.jpg',
       linkedin: '#'
     },
     {
