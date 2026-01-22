@@ -35,9 +35,9 @@ const NetWise = () => {
       linkedin: '#'
     },
     {
-      name: 'Dr. Abdul Wahid',
-      affiliation: 'IIIT Dharwad',
-      photo: '/Abdul_wahid.jpg',
+      name: 'Mr Dhaval Shukla',
+      affiliation: 'CID Crime, Gujarat',
+      photo: '/Dhaval Shukla.png',
       linkedin: '#'
     },
     {
