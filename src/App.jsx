@@ -19,6 +19,7 @@ const About = lazy(() => import('./pages/About'))
 const Team = lazy(() => import('./pages/Team'))
 const Events = lazy(() => import('./pages/Events'))
 const CyberWise = lazy(() => import('./pages/CyberWise'))
+const CyberWise2 = lazy(() => import('./pages/CyberWise2'))
 const NetWise = lazy(() => import('./pages/NetWise'))
 const Patrons = lazy(() => import('./pages/Patrons'))
 const Contact = lazy(() => import('./pages/Contact'))
@@ -118,6 +119,8 @@ const AppContent = () => {
               <Route path="/team" element={<Team />} />
               <Route path="/events" element={<Events />} />
               <Route path="/events/cyberwise" element={<CyberWise />} />
+              <Route path="/events/cyberwise-2" element={<CyberWise2 />} />
+              <Route path="/events/cyberwise2" element={<CyberWise2 />} />
               <Route path="/events/infracyberwise" element={<NetWise />} />
               <Route path="/patrons" element={<Patrons />} />
               <Route path="/contact" element={<Contact />} />

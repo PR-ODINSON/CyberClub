@@ -56,8 +56,9 @@ const Events = () => {
   }
 
   const getEventLink = (event) => {
-    if (event.id === 1 || event.id === 3) return '/events/cyberwise' // CYBERWISE has dedicated page
+    if (event.id === 1) return '/events/cyberwise' // CYBERWISE 2025 has dedicated page
     if (event.id === 2) return '/events/infracyberwise' // INFRA CYBERWISE has dedicated page
+    if (event.id === 3) return '/events/cyberwise-2' // CYBERWISE 2.0 2026 has dedicated page
     return '#' // Other events can link to registration or details
   }
 
