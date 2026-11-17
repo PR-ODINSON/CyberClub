@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import eventsData from '../data/events.json'
 
 const CyberWise = () => {
-  const [event] = useState(eventsData[0]) // Get the CYBERWISE event
+  const [event] = useState(eventsData.find(e => e.id === 3) || eventsData[0]) // Get Cyberwise 2.0 2026 event
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -32,6 +32,10 @@ const CyberWise = () => {
   }
 
   const agendaIcons = {
+    'Cybersecurity Practices': FiShield,
+    'Threat Analysis & Defense': FiTarget,
+    'Network & Information Security': FiCode,
+    'Interactive Expert Sessions': FiUsers,
     'Expert Talks': FiUsers,
     'Hands-on Labs': FiCode,
     'Cybercrime Awareness': FiShield,
@@ -41,10 +45,10 @@ const CyberWise = () => {
   return (
     <>
       <Helmet>
-        <title>CYBERWISE Workshop – IITRAM Cyber Club</title>
-        <meta name="description" content="CYBERWISE – A successful 2-day workshop on Cybersecurity at IITRAM, Ahmedabad sponsored by CAWACH Kendra, Government of Gujarat." />
-        <meta property="og:title" content="CYBERWISE – Cybersecurity Workshop at IITRAM" />
-        <meta property="og:description" content="Successfully completed hands-on sessions, expert talks, and cybersecurity awareness organized by CyberClub IITRAM." />
+        <title>Cyberwise 2.0 2026 – IITRAM Cyber Club</title>
+        <meta name="description" content="Cyberwise 2.0 2026 – A 1-day workshop on cybersecurity practices at IITRAM, Ahmedabad sponsored by CAWACH Kendra, Government of Gujarat." />
+        <meta property="og:title" content="Cyberwise 2.0 2026 – Cybersecurity Practices Workshop" />
+        <meta property="og:description" content="Join our 1-day workshop on cybersecurity practices featuring expert speakers from CBI, IITRAM, and Sardar Patel University." />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
@@ -110,11 +114,11 @@ const CyberWise = () => {
                   <div className="bg-dark rounded-2xl px-8 py-4">
                     <h1 className="text-4xl lg:text-6xl font-heading font-black mb-2">
                       <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
-                        CYBERWISE
+                        CYBERWISE 2.0
                       </span>
                     </h1>
                     <p className="text-lg text-muted-light dark:text-muted-dark">
-                      2-Day Workshop on Cybersecurity
+                      1-Day Workshop on Cybersecurity Practices
                     </p>
                   </div>
                 </div>
@@ -124,7 +128,7 @@ const CyberWise = () => {
                 variants={itemVariants}
                 className="text-2xl lg:text-3xl font-heading font-bold text-light mb-6"
               >
-                For Information Security Expertise
+                Practical Cybersecurity Defense & Modern Practices
               </motion.h2>
 
               <motion.p 
@@ -134,12 +138,17 @@ const CyberWise = () => {
                 {event.description}
               </motion.p>
               
-              {/* Event Completed Badge */}
+              {/* Registration Open Badge */}
               <motion.div variants={itemVariants} className="mt-8">
-                <div className="inline-flex items-center space-x-2 bg-green-500/20 border-2 border-green-500/40 rounded-full px-6 py-3">
-                  <FiAward className="w-5 h-5 text-green-400" />
-                  <span className="text-green-400 font-semibold text-lg">Event Successfully Completed</span>
-                </div>
+                <a
+                  href="https://forms.cloud.microsoft/r/Tm6n0ZCCgZ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 bg-green-500/20 border-2 border-green-500/40 rounded-full px-6 py-3 hover:bg-green-500/30 hover:border-green-500/60 transition-all duration-300 hover:scale-105"
+                >
+                  <div className="w-2.5 h-2.5 bg-green-400 rounded-full animate-pulse" />
+                  <span className="text-green-400 font-semibold text-lg">Registration Open — Click to Register</span>
+                </a>
               </motion.div>
             </motion.div>
           </div>
@@ -172,8 +181,8 @@ const CyberWise = () => {
                         <FiCalendar className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <h4 className="text-lg font-semibold text-light mb-1">Dates</h4>
-                        <p className="text-muted-light dark:text-muted-dark">14th – 15th November 2025</p>
+                        <h4 className="text-lg font-semibold text-light mb-1">Date & Duration</h4>
+                        <p className="text-muted-light dark:text-muted-dark">1-Day Workshop • 2026</p>
                       </div>
                     </div>
 
@@ -193,7 +202,7 @@ const CyberWise = () => {
                       </div>
                       <div>
                         <h4 className="text-lg font-semibold text-light mb-1">Time</h4>
-                        <p className="text-muted-light dark:text-muted-dark">09:00 AM - 05:00 PM (Both Days)</p>
+                        <p className="text-muted-light dark:text-muted-dark">09:00 AM - 05:00 PM</p>
                       </div>
                     </div>
 
@@ -278,6 +287,10 @@ const CyberWise = () => {
                       {item}
                     </h3>
                     <p className="text-muted-light dark:text-muted-dark text-sm">
+                      {item === 'Cybersecurity Practices' && 'Essential cybersecurity practices and defensive strategies for modern threats'}
+                      {item === 'Threat Analysis & Defense' && 'Deep dive into emerging threat vectors and preventive defense techniques'}
+                      {item === 'Network & Information Security' && 'Safeguarding communication systems and information assets'}
+                      {item === 'Interactive Expert Sessions' && 'Direct interactions, Q&A, and real-world case discussions with speakers'}
                       {item === 'Expert Talks' && 'Learn from industry professionals and cybersecurity experts'}
                       {item === 'Hands-on Labs' && 'Practical sessions with real-world scenarios'}
                       {item === 'Cybercrime Awareness' && 'Understanding current threats and attack vectors'}
@@ -301,14 +314,14 @@ const CyberWise = () => {
           <div className="container-width text-center">
             <motion.div variants={itemVariants} className="space-y-8">
               <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6">
-                <span className="gradient-text">Program Schedule</span>
+                <span className="gradient-text">Registration & Participation</span>
               </h2>
               <p className="text-xl text-muted-light dark:text-muted-dark max-w-3xl mx-auto">
-                Get the complete 2-day program schedule with detailed timings, sessions, and speaker information
+                Join our 1-day workshop on cybersecurity practices and learn directly from renowned domain experts
               </p>
               
               <motion.a
-                href="https://drive.google.com/file/d/1fgpMaEYIxTgWrx7ck_PwHLDB4pSE1V-t/view?usp=sharing"
+                href="https://forms.cloud.microsoft/r/Tm6n0ZCCgZ"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-400 to-purple-600 hover:from-cyan-300 hover:to-purple-500 text-dark font-bold text-lg px-10 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 hover:scale-105"
@@ -316,11 +329,11 @@ const CyberWise = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <FiCalendar className="w-6 h-6" />
-                <span>View Full Schedule (PDF)</span>
+                <span>Register for Cyberwise 2.0</span>
               </motion.a>
               
               <p className="text-sm text-muted-light dark:text-muted-dark">
-                Detailed program schedule for both days • November 14-15, 2025
+                Official Registration Form • Cyberwise 2.0 2026
               </p>
             </motion.div>
           </div>
@@ -344,7 +357,7 @@ const CyberWise = () => {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {/* Speaker 1: Shahnawaaz Abdullah */}
               <motion.div
                 variants={itemVariants}
@@ -365,7 +378,7 @@ const CyberWise = () => {
                           Mr. Shahnawaaz Abdullah
                         </h3>
                         <p className="text-primary text-sm font-semibold">
-                          Central Bureau of Investigation, Delhi
+                          Central Bureau of Investigation (CBI), Delhi
                         </p>
                       </div>
                     </div>
@@ -382,7 +395,7 @@ const CyberWise = () => {
                         <p><strong className="text-primary">Expertise:</strong> Cybercrime Investigation, Digital Forensics</p>
                         <p><strong className="text-primary">Focus:</strong> Complex cybercrime cases, financial fraud investigation</p>
                         <p className="text-xs leading-relaxed">
-                          Seasoned investigator with extensive experience in handling high-profile cybercrime cases and digital forensics.
+                          Distinguished guest investigator re-invited to share in-depth knowledge on active cybercrime threats and digital investigation practices.
                         </p>
                       </div>
                     </div>
@@ -390,7 +403,7 @@ const CyberWise = () => {
                 </div>
               </motion.div>
 
-              {/* Speaker 2: Dr. Nitin Awathare */}
+              {/* Speaker 2: Dr. Prakash A. Dabhi */}
               <motion.div
                 variants={itemVariants}
                 className="group perspective-1000"
@@ -400,149 +413,14 @@ const CyberWise = () => {
                   <div className="absolute inset-0 backface-hidden rounded-2xl overflow-hidden border border-primary/20">
                     <div className="relative h-full">
                       <img 
-                        src="/Nitin Awathare.png" 
-                        alt="Dr. Nitin Awathare"
+                        src="/Prakash_Dabhi.jpg" 
+                        alt="Dr. Prakash A. Dabhi"
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent" />
                       <div className="absolute bottom-0 left-0 right-0 p-6">
                         <h3 className="text-xl font-heading font-bold text-white mb-1">
-                          Dr. Nitin Awathare
-                        </h3>
-                        <p className="text-primary text-sm font-semibold">
-                          IIT Jodhpur
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Back of card */}
-                  <div className="absolute inset-0 backface-hidden rotate-y-180 bg-dark/95 backdrop-blur-sm rounded-2xl border border-primary/20 p-6 flex flex-col justify-center">
-                    <div className="text-center">
-                      <h3 className="text-lg font-heading font-bold text-white mb-4">
-                        Dr. Nitin Awathare
-                      </h3>
-                      <div className="space-y-3 text-sm text-muted-light">
-                        <p><strong className="text-primary">Position:</strong> Assistant Professor, CSE</p>
-                        <p><strong className="text-primary">Expertise:</strong> Distributed Systems, Blockchain</p>
-                        <p><strong className="text-primary">Focus:</strong> Payment Channel Networks, System Architecture</p>
-                        <p className="text-xs leading-relaxed">
-                          Ph.D. from IIT Bombay (2022), specializes in blockchain technology and distributed systems security.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Speaker 3: Mr. Divyang Vyas */}
-              <motion.div
-                variants={itemVariants}
-                className="group perspective-1000"
-              >
-                <div className="relative w-full h-80 transform-style-preserve-3d transition-transform duration-700 group-hover:rotate-y-180">
-                  {/* Front of card */}
-                  <div className="absolute inset-0 backface-hidden rounded-2xl overflow-hidden border border-primary/20">
-                    <div className="relative h-full">
-                      <img 
-                        src="/Divyang Vyas.jpeg" 
-                        alt="Mr. Divyang Vyas"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent" />
-                      <div className="absolute bottom-0 left-0 right-0 p-6">
-                        <h3 className="text-xl font-heading font-bold text-white mb-1">
-                          Mr. Divyang Vyas
-                        </h3>
-                        <p className="text-primary text-sm font-semibold">
-                        Biz Secure Labs Pvt. Ltd
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Back of card */}
-                  <div className="absolute inset-0 backface-hidden rotate-y-180 bg-dark/95 backdrop-blur-sm rounded-2xl border border-primary/20 p-6 flex flex-col justify-center">
-                    <div className="text-center">
-                      <h3 className="text-lg font-heading font-bold text-white mb-4">
-                        Mr. Divyang Vyas
-                      </h3>
-                      <div className="space-y-3 text-sm text-muted-light">
-                        <p><strong className="text-primary">Position:</strong> Faculty, Computer Science</p>
-                        <p><strong className="text-primary">Expertise:</strong> Cybersecurity, Network Security</p>
-                        <p><strong className="text-primary">Focus:</strong> Information Security, Cryptography</p>
-                        <p className="text-xs leading-relaxed">
-                          Renowned researcher in cybersecurity with extensive work in network security and cryptographic protocols.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Speaker 4: Dr. Nilay Mistry */}
-              <motion.div
-                variants={itemVariants}
-                className="group perspective-1000"
-              >
-                <div className="relative w-full h-80 transform-style-preserve-3d transition-transform duration-700 group-hover:rotate-y-180">
-                  {/* Front of card */}
-                  <div className="absolute inset-0 backface-hidden rounded-2xl overflow-hidden border border-primary/20">
-                    <div className="relative h-full">
-                      <img 
-                        src="/Nilay Mistry.jpg" 
-                        alt="Dr. Nilay Mistry"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent" />
-                      <div className="absolute bottom-0 left-0 right-0 p-6">
-                        <h3 className="text-xl font-heading font-bold text-white mb-1">
-                          Dr. Nilay Mistry
-                        </h3>
-                        <p className="text-primary text-sm font-semibold">
-                          National Forensic Sciences University
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Back of card */}
-                  <div className="absolute inset-0 backface-hidden rotate-y-180 bg-dark/95 backdrop-blur-sm rounded-2xl border border-primary/20 p-6 flex flex-col justify-center">
-                    <div className="text-center">
-                      <h3 className="text-lg font-heading font-bold text-white mb-4">
-                        Dr. Nilay Mistry
-                      </h3>
-                      <div className="space-y-3 text-sm text-muted-light">
-                        <p><strong className="text-primary">Position:</strong> Faculty, NFSU</p>
-                        <p><strong className="text-primary">Expertise:</strong> Digital Forensics, Cyber Law</p>
-                        <p><strong className="text-primary">Focus:</strong> Forensic Analysis, Evidence Recovery</p>
-                        <p className="text-xs leading-relaxed">
-                          Expert in digital forensics and cyber law with extensive experience in forensic investigations and evidence analysis.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Speaker 5: Dr. Manoj Choudhuri */}
-              <motion.div
-                variants={itemVariants}
-                className="group perspective-1000"
-              >
-                <div className="relative w-full h-80 transform-style-preserve-3d transition-transform duration-700 group-hover:rotate-y-180">
-                  {/* Front of card */}
-                  <div className="absolute inset-0 backface-hidden rounded-2xl overflow-hidden border border-primary/20">
-                    <div className="relative h-full">
-                      <img 
-                        src="/Manoj Choudhuri.jpg" 
-                        alt="Dr. Manoj Choudhuri"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent" />
-                      <div className="absolute bottom-0 left-0 right-0 p-6">
-                        <h3 className="text-xl font-heading font-bold text-white mb-1">
-                          Dr. Manoj Choudhuri
+                          Dr. Prakash A. Dabhi
                         </h3>
                         <p className="text-primary text-sm font-semibold">
                           IITRAM
@@ -555,14 +433,14 @@ const CyberWise = () => {
                   <div className="absolute inset-0 backface-hidden rotate-y-180 bg-dark/95 backdrop-blur-sm rounded-2xl border border-primary/20 p-6 flex flex-col justify-center">
                     <div className="text-center">
                       <h3 className="text-lg font-heading font-bold text-white mb-4">
-                        Dr. Manoj Choudhuri
+                        Dr. Prakash A. Dabhi
                       </h3>
                       <div className="space-y-3 text-sm text-muted-light">
-                        <p><strong className="text-primary">Position:</strong> Faculty, IITRAM</p>
-                        <p><strong className="text-primary">Expertise:</strong> Computer Science, Cybersecurity</p>
-                        <p><strong className="text-primary">Focus:</strong> Information Security, Research</p>
+                        <p><strong className="text-primary">Institution:</strong> IITRAM, Ahmedabad</p>
+                        <p><strong className="text-primary">Expertise:</strong> Computer Science & Engineering, Cybersecurity</p>
+                        <p><strong className="text-primary">Focus:</strong> Security Architecture, Information Protection</p>
                         <p className="text-xs leading-relaxed">
-                          Distinguished faculty member at IITRAM with expertise in computer science and cybersecurity research.
+                          Distinguished academician at IITRAM leading research and practical education in cybersecurity practices and computer systems.
                         </p>
                       </div>
                     </div>
@@ -570,7 +448,7 @@ const CyberWise = () => {
                 </div>
               </motion.div>
 
-              {/* Speaker 6: Dr. Parag C. Shukla */}
+              {/* Speaker 3: Dr. Jay Mehta */}
               <motion.div
                 variants={itemVariants}
                 className="group perspective-1000"
@@ -580,17 +458,17 @@ const CyberWise = () => {
                   <div className="absolute inset-0 backface-hidden rounded-2xl overflow-hidden border border-primary/20">
                     <div className="relative h-full">
                       <img 
-                        src="/Parag-Shukal.png" 
-                        alt="Dr. Parag C. Shukla"
+                        src="/J-G-Mehta-147x189.jpeg" 
+                        alt="Dr. Jay Mehta"
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent" />
                       <div className="absolute bottom-0 left-0 right-0 p-6">
                         <h3 className="text-xl font-heading font-bold text-white mb-1">
-                          Dr. Parag C. Shukla
+                          Dr. Jay Mehta
                         </h3>
                         <p className="text-primary text-sm font-semibold">
-                          Kaushalya - The Skill University
+                          Sardar Patel University
                         </p>
                       </div>
                     </div>
@@ -600,14 +478,14 @@ const CyberWise = () => {
                   <div className="absolute inset-0 backface-hidden rotate-y-180 bg-dark/95 backdrop-blur-sm rounded-2xl border border-primary/20 p-6 flex flex-col justify-center">
                     <div className="text-center">
                       <h3 className="text-lg font-heading font-bold text-white mb-4">
-                        Dr. Parag C. Shukla
+                        Dr. Jay Mehta
                       </h3>
                       <div className="space-y-3 text-sm text-muted-light">
-                        <p><strong className="text-primary">Position:</strong> Associate Professor & Head of Department</p>
-                        <p><strong className="text-primary">Department:</strong> School of Computing</p>
-                        <p><strong className="text-primary">Institution:</strong> Kaushalya - The Skill University</p>
+                        <p><strong className="text-primary">Institution:</strong> Sardar Patel University</p>
+                        <p><strong className="text-primary">Expertise:</strong> Computer Science, Cybersecurity Research</p>
+                        <p><strong className="text-primary">Focus:</strong> Cyber Defense Strategies, Secure Computing</p>
                         <p className="text-xs leading-relaxed">
-                          Distinguished academic leader with expertise in computing and technology education, driving innovation in skill development.
+                          Renowned educator and cybersecurity researcher from Sardar Patel University guiding students in effective cyber hygiene and defense techniques.
                         </p>
                       </div>
                     </div>

@@ -54,26 +54,28 @@ const Home = () => {
     },
   ]
 
-  // INFRA CYBERWISE 2026 - Featured Event
+  // Cyberwise 2.0 2026 - Featured Event
   const upcomingEvents = [
     {
-      id: 2,
-      title: 'INFRA CYBERWISE 2026 - Infrastructure Cybersecurity Workshop',
-      date: '2026-01-30',
-      endDate: '2026-01-31',
+      id: 3,
+      title: 'Cyberwise 2.0 2026',
+      subtitle: 'Workshop on Cybersecurity Practices',
+      date: '2026-03-15',
+      endDate: '2026-03-15',
       time: '09:00',
       endTime: '17:00',
       location: 'IITRAM Campus, Ahmedabad',
       type: 'Workshop',
+      duration: '1 Day',
       attendees: 0,
       maxAttendees: 150,
-      description: 'A comprehensive workshop bringing together students, faculty, and industry professionals to explore cybersecurity challenges and protection strategies for critical infrastructure systems.',
+      description: 'A 1-day workshop on cybersecurity practices bringing together leading researchers, academicians, and security experts to provide practical insights, real-world knowledge, and defense strategies against modern cyber threats.',
       organizer: 'Cyber Club, IITRAM, Ahmedabad',
       sponsor: 'CAWACH Kendra, Government of Gujarat',
       featured: true,
       registrationOpen: true,
-      registrationLink: 'https://forms.cloud.microsoft/r/cd7k3PMp3p',
-      agenda: ['Infrastructure Resilience', 'Cyber Risk Management', 'Safety Practices', 'Incident Response']
+      registrationLink: 'https://forms.cloud.microsoft/r/Tm6n0ZCCgZ',
+      agenda: ['Cybersecurity Practices', 'Threat Analysis & Defense', 'Network & Information Security', 'Interactive Expert Sessions']
     }
   ]
 
@@ -273,7 +275,7 @@ const Home = () => {
                             whileHover={{ scale: 1.05 }}
                           >
                             <span className="text-sm font-semibold text-primary">
-                              {event.type} • 2 Days
+                              {event.type} • {event.duration || '1 Day'}
                             </span>
                           </motion.div>
                           <a
@@ -297,11 +299,11 @@ const Home = () => {
                         >
                           <h3 className="text-4xl lg:text-5xl font-heading font-black mb-2">
                             <span className="bg-gradient-to-r from-green-400 to-blue-600 bg-clip-text text-transparent">
-                              INFRA CYBERWISE 2026
+                              {event.title}
                             </span>
                           </h3>
                           <p className="text-xl text-gray-600 dark:text-muted-dark font-medium">
-                            Infrastructure Cybersecurity Workshop
+                            {event.subtitle || 'Workshop on Cybersecurity Practices'}
                           </p>
                         </motion.div>
 
@@ -427,7 +429,7 @@ const Home = () => {
                           whileTap={{ scale: 0.95 }}
                         >
                           <Link
-                            to="/events/infracyberwise"
+                            to="/events/cyberwise"
                             className="inline-flex items-center space-x-2 px-8 py-3 bg-dark/10 dark:bg-light/5 text-primary font-bold rounded-lg hover:bg-dark/20 dark:hover:bg-light/10 transition-all duration-300 border-2 border-primary/30"
                             onMouseEnter={() => setHover('info')}
                             onMouseLeave={removeHover}

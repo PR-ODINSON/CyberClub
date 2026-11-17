@@ -56,7 +56,7 @@ const Events = () => {
   }
 
   const getEventLink = (event) => {
-    if (event.id === 1) return '/events/cyberwise' // CYBERWISE has dedicated page
+    if (event.id === 1 || event.id === 3) return '/events/cyberwise' // CYBERWISE has dedicated page
     if (event.id === 2) return '/events/infracyberwise' // INFRA CYBERWISE has dedicated page
     return '#' // Other events can link to registration or details
   }
@@ -306,7 +306,7 @@ const Events = () => {
                                 
                                 {!event.completed && (
                                   <motion.a
-                                    href={event.id === 1 ? "https://forms.cloud.microsoft/r/cd7k3PMp3p?origin=lprLink" : "#"}
+                                    href={event.registrationLink || (event.id === 1 ? "https://forms.cloud.microsoft/r/cd7k3PMp3p?origin=lprLink" : "#")}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className={`inline-flex items-center space-x-2 px-6 py-2 bg-gradient-to-r ${gradient} text-dark font-semibold rounded-lg hover:shadow-lg transition-all duration-300`}

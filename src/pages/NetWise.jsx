@@ -174,20 +174,14 @@ const NetWise = () => {
                 {event?.description}
               </motion.p>
               
-              {/* Registration Open Badge */}
+              {/* Event Completed Badge */}
               <motion.div variants={itemVariants} className="mt-8 px-4">
-                <a 
-                  href="https://forms.cloud.microsoft/r/cd7k3PMp3p" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center space-x-2 bg-green-500/20 border-2 border-green-500/40 rounded-full px-4 sm:px-6 py-3 hover:bg-green-500/30 hover:border-green-500/60 transition-all duration-300 min-h-[48px]"
-                >
+                <div className="inline-flex items-center justify-center space-x-2 bg-green-500/20 border-2 border-green-500/40 rounded-full px-4 sm:px-6 py-3 min-h-[48px]">
                   <FiAlertCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                   <span className="text-green-400 font-semibold text-sm sm:text-base lg:text-lg text-center">
-                    <span className="hidden sm:inline">Registration Now Open - Click to Register</span>
-                    <span className="sm:hidden">Register Now</span>
+                    Event Successfully Completed
                   </span>
-                </a>
+                </div>
               </motion.div>
             </motion.div>
           </div>
@@ -468,19 +462,9 @@ const NetWise = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 pt-4 px-4">
-                <a
-                  href="https://forms.cloud.microsoft/r/cd7k3PMp3p"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-green-400 to-blue-600 hover:from-green-300 hover:to-blue-500 text-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 min-h-[56px]"
-                >
-                  <span>Register Now</span>
-                  <FiArrowLeft className="w-5 h-5 rotate-180" />
-                </a>
-                
                 <Link
                   to="/events"
-                  className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-green-400/20 to-blue-600/20 hover:from-green-400/30 hover:to-blue-600/30 text-primary font-bold text-base sm:text-lg px-8 sm:px-10 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 border-2 border-green-400/40 min-h-[56px]"
+                  className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-green-400 to-blue-600 hover:from-green-300 hover:to-blue-500 text-dark font-bold text-base sm:text-lg px-8 sm:px-10 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 min-h-[56px]"
                 >
                   <FiArrowLeft className="w-5 h-5 rotate-180" />
                   <span>View All Events</span>
